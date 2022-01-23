@@ -1,5 +1,5 @@
-export default function Logo(props){
+export default function Logo({type="default"}){
     return(
-        <img src={props.type=="muted"?"/images/logo-muted.svg":"/images/logo.svg"} alt="logo" type={props.type}/>
+        <img src={type=="muted"?"/images/logo-muted.svg":"/images/logo.svg"} alt="logo" type={type}/>
     );
 }
