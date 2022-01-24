@@ -1,7 +1,6 @@
 import styles from "./Avatar.module.scss";
 import classNames from "classnames";
-import { ClassNames } from "@emotion/react";
-import { height } from "@mui/material/node_modules/@mui/system";
+
 
 
 export default function Avatar({size=90,url,verified=false}) {
