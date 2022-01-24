@@ -4,7 +4,7 @@ import { ClassNames } from "@emotion/react";
 import { height } from "@mui/material/node_modules/@mui/system";
 
 
-export default function Avatar({size=190,url,verified=false}) {
+export default function Avatar({size=90,url,verified=false}) {
     return(
         <div className={classNames(styles.avatar)}
         style={{
