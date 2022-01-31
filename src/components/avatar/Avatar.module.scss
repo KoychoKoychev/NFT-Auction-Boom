@@ -13,6 +13,7 @@
 .badge{
     position: absolute;
     bottom: -5%;
-    right: -5%;
+    right: min(-5%,-8px);
     width: 30%;
+    min-width: 15px;
 }

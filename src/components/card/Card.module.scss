@@ -1,0 +1,81 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 339px;
+    height: 443px;
+    border-radius: 15px !important;
+    background-color: colors.$background_paper;
+    padding: 15px;
+}
+
+.media{
+    margin: 21px 0px;
+    padding: 0;
+    width: 309px;
+    height: 286px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media img{
+    width: 100%;
+    height: 100%;
+}
+
+.cardData{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardInfo{
+    line-height: 0%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2px;
+}
+
+.cardInfo .title{
+    font-family: "Montserrat",sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.22rem;
+    color: colors.$text_primary;
+    margin: 0;
+}
+
+.cardInfo .price{
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.0725rem;
+    color: colors.$secondary_main;
+    margin: 0;
+}
+
+.card .cardData .likes{
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.0725rem;
+    color: colors.$secondary_main;
+    margin: 0;
+    border:2px solid colors.$secondary_main;
+    padding: 9px 10px 9px 9px;
+}
+
+.card .cardData .likes span{
+    padding: 0px 0px 0px 10px;
+}
+
+.card .cardData .likes .hearthIcon{
+    color: colors.$secondary_main;
+}

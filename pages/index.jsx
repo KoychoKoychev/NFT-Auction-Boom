@@ -1,8 +1,14 @@
 import Avatar from "../src/components/avatar/Avatar";
 import Example from "../src/components/example/Example";
-import User from "../src/components/user/User";
+import Card from "../src/components/card/Card";
 
 
 export default function Index() {
-  return <User avatar="/images/avatar.png" size={53} name="terika77" info="134 Items"/>;
+  return <Card 
+  user={{avatar:{url:"/images/avatar.png"},verified:true}} 
+  mediaUrl="/images/nft.jpg" 
+  name="Clock" 
+  price="~12.2" 
+  currency="ETH"
+  likes={1100}/>;
 }
