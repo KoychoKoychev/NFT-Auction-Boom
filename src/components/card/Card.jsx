@@ -5,8 +5,7 @@ import Avatar from "../avatar/Avatar";
 import millify from "millify";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export default function Card(props) {
-    const {name="",likes=0,mediaUrl="",user={avatar:{url:""},verified:fales},price="",currency=""} = props
+export default function Card({name="",likes=0,mediaUrl="",user={avatar:{url:""},verified:fales},price="",currency=""}) {
 
     return(
         <CardComp className={classNames(styles.card)}>
@@ -21,7 +20,7 @@ export default function Card(props) {
                 </div>
                 <Chip 
                 className={classNames(styles.likes)} 
-                label={millify(Number(likes),{lowercase: true})}
+                label={millify(Number(likes))}
                 variant="outlined"
                 clickable="true"
                 icon={<FavoriteIcon className={classNames(styles.hearthIcon)} fontSize="inherit" color="primary"/>}
