@@ -10,9 +10,7 @@ export default function Card({name="",likes=0,mediaUrl="",user={avatar:{url:""},
     return(
         <CardComp className={classNames(styles.card)}>
             <Avatar size="33" url={user.avatar.url} verified={user.verified}/>
-            <div className={classNames(styles.media)}>
-                <img src={mediaUrl} alt="Card Image"/>
-            </div>
+            <img className={classNames(styles.media)} src={mediaUrl} alt="Card Image"/>
             <div className={classNames(styles.cardData)}>
                 <div className={classNames(styles.cardInfo)}>
                     <p className={classNames(styles.title)}>{name}</p>
