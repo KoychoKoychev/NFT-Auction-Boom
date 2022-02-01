@@ -1,5 +1,6 @@
 import Example from "../src/components/example/Example";
 import Auctions from "../src/components/auctions/Auctions";
+import Footer from "../src/components/footer/Footer";
 
 
 export default function Index() {
@@ -49,5 +50,5 @@ export default function Index() {
   },
   ]
 
-  return <Auctions cards={cardArr} />;
+  return <Footer />;
 }
