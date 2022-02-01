@@ -14,7 +14,7 @@ export default function Card({name="",likes=0,mediaUrl="",user={avatar:{url:""},
             <div className={classNames(styles.cardData)}>
                 <div className={classNames(styles.cardInfo)}>
                     <p className={classNames(styles.title)}>{name}</p>
-                    <p className={classNames(styles.price)}>{price} {currency}</p>
+                    <p className={classNames(styles.price)}>~{price} {currency}</p>
                 </div>
                 <Chip 
                 className={classNames(styles.likes)} 
