@@ -1,28 +1,53 @@
 import Example from "../src/components/example/Example";
-import Trending from "../src/components/trending/Trending";
-import Card from "../src/components/card/Card";
-
-
+import Auctions from "../src/components/auctions/Auctions";
 
 
 export default function Index() {
-  const card = {
-       name:"Ivy",
-       user:{
-          avatarUrl:"images/avatar.png",
-          verified:true
-       },
-       mediaUrl:"images/nft.jpg",
-       price:1,
-       currency:"ETH",
-       timeLeft: 10000
-    }
-  return <Card name="Ivy" 
-  user={{avatarUrl:"images/avatar.png",verified:true}} 
-  mediaUrl="images/nft.jpg" 
-  likes={1000}
-  price={1} 
-  currency="ETH"
-  timeLeft={3000}
-  />;
+  const cardArr = [{
+    name: "Ivy",
+    user: {
+      avatarUrl: "images/avatar.png",
+      verified: true
+    },
+    mediaUrl: "images/nft.jpg",
+    price: 1,
+    currency: "ETH",
+    timeLeft: 10000
+  },
+  {
+    name: "Aongus",
+    user: {
+      avatarUrl: "images/avatar.png",
+      verified: true
+    },
+    mediaUrl: "images/nft.jpg",
+    price: 1,
+    currency: "ETH",
+    timeLeft: 9000
+  },
+  {
+    name: "Conor",
+    user: {
+      avatarUrl: "images/avatar.png",
+      verified: true
+    },
+    mediaUrl: "images/nft.jpg",
+    price: 1,
+    currency: "ETH",
+    timeLeft: 12000
+  },
+  {
+    name: "Liam",
+    user: {
+      avatarUrl: "images/avatar.png",
+      verified: true
+    },
+    mediaUrl: "images/nft.jpg",
+    price: 1,
+    currency: "ETH",
+    timeLeft: 69000
+  },
+  ]
+
+  return <Auctions cards={cardArr} />;
 }
