@@ -11,14 +11,28 @@
     padding: 15px;
 }
 
+.live{
+    background-color: rgba($color: #24f25e, $alpha: 0.1) !important;
+}
+
 .media{
     margin: 21px 0px;
     padding: 0;
     width: 309px;
     height: 286px;
     border-radius: 15px;
-
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.media img{
+    width: 100%;
+    height: 100%;
+}
+
 
 .cardData{
     display: flex;
@@ -70,4 +84,52 @@
 
 .card .cardData .likes .hearthIcon{
     color: colors.$secondary_main;
+}
+
+.card .media .badge{
+    width: 75px;
+    height: 30px;
+    border-radius: 7px;
+    background-color: colors.$secondary_main;
+    display: flex;
+    position: absolute;
+    color: colors.$background_paper;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px 4px 10px;
+    top:9px;
+    left: 10px;
+}
+
+.card .media .badge span{
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 1.0725rem;
+    color: colors.$background_paper;
+}
+
+.card .media .badge .circleIcon{
+    font-size: 0.82rem;
+    margin-bottom: 3px;
+}
+
+.card .media .countdown{
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    background-color: colors.$secondary_main;
+    color: colors.$background_paper;
+    width: 100%;
+    height: 42px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .media .countdown.hidden{
+    display: none;
 }

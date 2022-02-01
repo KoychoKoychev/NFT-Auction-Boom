@@ -1,57 +1,28 @@
 import Example from "../src/components/example/Example";
 import Trending from "../src/components/trending/Trending";
+import Card from "../src/components/card/Card";
+
 
 
 
 export default function Index() {
-  const cardsArr = [ {
+  const card = {
        name:"Ivy",
        user:{
-          avatar:{
-             url:"images/avatar.png"
-          },
+          avatarUrl:"images/avatar.png",
           verified:true
        },
        mediaUrl:"images/nft.jpg",
        price:1,
-       currency:"ETH"
-    },
-    {
-       "name":"Judie",
-       "user":{
-          "avatar":{
-             "url":"images/avatar.png"
-          },
-          "verified":true
-       },
-       "mediaUrl":"images/nft.jpg",
-       "price":2.3,
-       "currency":"ETH"
-    },
-    {
-       "name":"Juniper",
-       "user":{
-          "avatar":{
-             "url":"images/avatar.png"
-          },
-          "verified":true
-       },
-       "mediaUrl":"images/nft.jpg",
-       "price":5,
-       "currency":"ETH"
-    },
-    {
-       "name":"Maple",
-       "user":{
-          "avatar":{
-             "url":"images/avatar.png"
-          },
-          "verified":true
-       },
-       "mediaUrl":"images/nft.jpg",
-       "price":10,
-       "currency":"ETH"
+       currency:"ETH",
+       timeLeft: 10000
     }
- ]
-  return <Trending cards={cardsArr}/>;
+  return <Card name="Ivy" 
+  user={{avatarUrl:"images/avatar.png",verified:true}} 
+  mediaUrl="images/nft.jpg" 
+  likes={1000}
+  price={1} 
+  currency="ETH"
+  timeLeft={3000}
+  />;
 }
