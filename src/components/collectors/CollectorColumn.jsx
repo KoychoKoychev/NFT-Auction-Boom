@@ -14,7 +14,7 @@ export default function CollectorColumns({items=[]}) {
                     nftsCount={el.nftsCount} 
                     avatar={el.avatar}
                     verified={el.verified}
-                    type={index===1?"light":"dark"}/>
+                    type={index % 2 !==0 ?"lighter":"darker"}/>
                 )
             })}
         </div>

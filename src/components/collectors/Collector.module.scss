@@ -5,12 +5,13 @@
 .container{
     width: 340px;
     height: 76px;
+}
+
+.container.dark{
     background-color: rgba(colors.$primary_main, 10%);
 }
 
-.container_light{
-    width: 340px;
-    height: 76px;
+.container.light{
     background-color: rgba(colors.$primary_main, 20%);
 }
 
@@ -26,26 +27,15 @@
     line-height: 24.38px;
     text-align: center;
     font-weight: 900;
-    background-color: rgba(colors.$primary_main, 20%);
     padding-top: 7px;
     padding-left: 10px;
 }
+.col_num.dark{
+    background-color: rgba(colors.$primary_main, 20%);
+}
 
-.col_num_light{
-    height: 76px;
-    width: 79px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: colors.$text_primary;
-    font-family: "Montserrat",sans-serif;
-    font-size: 20px;
-    line-height: 24.38px;
-    text-align: center;
-    font-weight: 900;
+.col_num.light{
     background-color: rgba(colors.$primary_main, 30%);
-    padding-top: 7px;
-    padding-left: 10px;
 }
 
 .container .col_info{
