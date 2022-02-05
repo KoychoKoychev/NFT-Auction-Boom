@@ -5,11 +5,11 @@ import { Grid } from "@mui/material";
 
 export default function Collector({name,avatar,verified=false,type="dark",nftsCount="",number=0}) {
     return(
-        <div className={classNames(styles.container,type==="light"?styles.light:null)}>
+        <div className={classNames(type==="light"?styles.container_light:styles.container)}>
             <Grid container
             alignItems="center"
             >
-                <Grid item className={classNames(styles.col_num,type==="light"?styles.light:null)}>
+                <Grid item className={classNames(type==="light"?styles.col_num_light:styles.col_num)}>
                     {number}
                 </Grid>
                 <Grid item className={classNames(styles.col_info)}>
