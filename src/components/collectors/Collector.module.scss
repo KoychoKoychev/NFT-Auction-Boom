@@ -5,9 +5,6 @@
 .container{
     width: 340px;
     height: 76px;
-}
-
-.container.dark{
     background-color: rgba(colors.$primary_main, 10%);
 }
 
@@ -29,9 +26,8 @@
     font-weight: 900;
     padding-top: 7px;
     padding-left: 10px;
-}
-.col_num.dark{
     background-color: rgba(colors.$primary_main, 20%);
+
 }
 
 .col_num.light{
