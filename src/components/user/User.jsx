@@ -9,7 +9,7 @@ export default function User({name="",info="",avatar="",size=55,verified=false})
             <Avatar className={classNames(styles.avatar)} size={size} url={avatar} verified={verified}/>
             <div className={classNames(styles.inline)}>
             <span className={classNames(styles.name)}>{name}</span>
-            <span className={classNames(styles.info)}>{info}</span>
+            <span className={classNames(styles.info)}>{info} Items</span>
             </div>
         </div>
     )

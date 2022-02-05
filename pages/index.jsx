@@ -2,6 +2,8 @@ import Example from "../src/components/example/Example";
 import Step from "../src/components/how/Step";
 import How from "../src/components/how/How";
 import Featured from "../src/components/featured/Featured";
+import Collector from "../src/components/collectors/Collector";
+import CollectorColumns from "../src/components/collectors/CollectorColumn";
 
 
 export default function Index() {
@@ -103,5 +105,29 @@ export default function Index() {
     }
   ]
 
-  return <Featured items={imageArr}/>;
+  const userArr=[
+    {
+      name: "terika77",
+      nftsCount: 134,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 10
+    },
+    {
+      name: "brendan_1",
+      nftsCount: 98,
+      avatar: "/images/avatar.png",
+      verified: false,
+      id: 2
+    },
+    {
+      name: "damiann",
+      nftsCount: 97,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 412
+    },
+  ]
+
+  return <CollectorColumns items={userArr}/>;
 }
