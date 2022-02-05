@@ -1,8 +1,4 @@
 import Example from "../src/components/example/Example";
-import Step from "../src/components/how/Step";
-import How from "../src/components/how/How";
-import Featured from "../src/components/featured/Featured";
-import Collector from "../src/components/collectors/Collector";
 import CollectorColumns from "../src/components/collectors/CollectorColumn";
 
 
