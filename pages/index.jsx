@@ -107,7 +107,7 @@ export default function Index() {
       nftsCount: 134,
       avatar: "/images/avatar.png",
       verified: true,
-      id: 10
+      id: 1
     },
     {
       name: "brendan_1",
@@ -121,7 +121,7 @@ export default function Index() {
       nftsCount: 97,
       avatar: "/images/avatar.png",
       verified: true,
-      id: 412
+      id: 3
     },
   ]
 

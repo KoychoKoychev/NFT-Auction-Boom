@@ -9,12 +9,12 @@ export default function CollectorColumns({items=[]}) {
                 return(
                     <Collector
                     key={el.id} 
-                    number={index+1} 
+                    number={el.id} 
                     name={el.name} 
                     nftsCount={el.nftsCount} 
                     avatar={el.avatar}
                     verified={el.verified}
-                    type={index % 2 !==0 ? "light":"dark"}/>
+                    type={index===1 ? "light":"dark"}/>
                 )
             })}
         </div>
