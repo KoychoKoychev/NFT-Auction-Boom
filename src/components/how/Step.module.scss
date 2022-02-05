@@ -1,0 +1,57 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.wrapper{
+    width: 580px;
+    height: 215px;
+    background-color: colors.$background_paper;
+    border-radius: 30px;
+    padding-right: 55px;
+}
+
+.step_num{
+    height: 100%;
+    width: 187px;
+    color: colors.$text_primary;
+    font-family: "Montserrat",sans-serif;
+    font-size: 100px;
+    line-height: 215px;
+    text-align: center;
+    font-weight: 700;
+    background-color: rgba($color: #4E24F2, $alpha: 0.1);
+}
+
+.step_info{
+    text-align: left;
+    padding-left: 54px;
+    padding-top: 3%;
+    height: 100%;
+}
+
+.step_title{
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    color: colors.$text_primary;
+}
+
+.step_descr{
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: colors.$text_secondary;
+    width: 284px;
+    max-height: 100px;
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+
+.step_descr::-webkit-scrollbar{
+    width: 0px;
+}

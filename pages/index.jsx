@@ -1,6 +1,6 @@
 import Example from "../src/components/example/Example";
-import Auctions from "../src/components/auctions/Auctions";
-import Footer from "../src/components/footer/Footer";
+import Step from "../src/components/how/Step";
+import How from "../src/components/how/How";
 
 
 export default function Index() {
@@ -50,5 +50,11 @@ export default function Index() {
   },
   ]
 
-  return <Footer />;
+  const itemsArr=[
+    {title:"Digital Currency",description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
+    {title:"Digital Currency",description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
+    {title:"Digital Currency",description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
+  ]
+
+  return <How title="HOW IT WORKS" description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM." items={itemsArr} link="https://mui.com/components/buttons/"/>;
 }
