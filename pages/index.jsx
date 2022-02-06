@@ -1,5 +1,5 @@
 import Example from "../src/components/example/Example";
-import CollectorColumns from "../src/components/collectors/CollectorColumn";
+import TopCollectors from "../src/components/topCollectors/TopCollectors";
 
 
 export default function Index() {
@@ -107,23 +107,74 @@ export default function Index() {
       nftsCount: 134,
       avatar: "/images/avatar.png",
       verified: true,
-      id: 1
     },
     {
       name: "brendan_1",
       nftsCount: 98,
       avatar: "/images/avatar.png",
       verified: false,
-      id: 2
     },
     {
       name: "damiann",
       nftsCount: 97,
       avatar: "/images/avatar.png",
       verified: true,
-      id: 3
     },
+    {
+      name: "terika77",
+      nftsCount: 134,
+      avatar: "/images/avatar.png",
+      verified: true,
+    },
+    {
+      name: "brendan_1",
+      nftsCount: 98,
+      avatar: "/images/avatar.png",
+      verified: false,
+    },
+    {
+      name: "damiann",
+      nftsCount: 97,
+      avatar: "/images/avatar.png",
+      verified: true,
+    },
+    {
+      name: "terika77",
+      nftsCount: 134,
+      avatar: "/images/avatar.png",
+      verified: true,
+    },
+    {
+      name: "brendan_1",
+      nftsCount: 98,
+      avatar: "/images/avatar.png",
+      verified: false,
+    },
+    {
+      name: "damiann",
+      nftsCount: 97,
+      avatar: "/images/avatar.png",
+      verified: true,
+    },
+    {
+      name: "terika77",
+      nftsCount: 134,
+      avatar: "/images/avatar.png",
+      verified: true,
+    },
+    {
+      name: "brendan_1",
+      nftsCount: 98,
+      avatar: "/images/avatar.png",
+      verified: false,
+    },
+    {
+      name: "damiann",
+      nftsCount: 97,
+      avatar: "/images/avatar.png",
+      verified: true,
+    }
   ]
 
-  return <CollectorColumns items={userArr}/>;
+  return <TopCollectors collectors={userArr}/>;
 }
