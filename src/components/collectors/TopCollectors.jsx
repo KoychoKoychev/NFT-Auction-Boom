@@ -33,7 +33,7 @@ export default function TopCollectors({collectors=[]}) {
                     {splitArr.map((el) => {
                         return (
                             <Grid item >
-                                <CollectorColumn items={el}/>
+                                <CollectorColumn key={el.id} items={el}/>
                             </Grid>
                         )
                     })}
