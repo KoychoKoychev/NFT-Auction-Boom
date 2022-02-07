@@ -1,7 +1,7 @@
 import styles from "./TopCollectors.module.scss";
 import classNames from "classnames";
 import { Grid,Container,Select,MenuItem } from "@mui/material";
-import CollectorColumns from "./CollectorColumn";
+import CollectorColumn from "./CollectorColumn";
 
 
 export default function TopCollectors({collectors=[]}) {
@@ -33,7 +33,7 @@ export default function TopCollectors({collectors=[]}) {
                     {splitArr.map((el) => {
                         return (
                             <Grid item >
-                                <CollectorColumns items={el}/>
+                                <CollectorColumn items={el}/>
                             </Grid>
                         )
                     })}
