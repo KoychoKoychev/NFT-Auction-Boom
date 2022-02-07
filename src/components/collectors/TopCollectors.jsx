@@ -1,7 +1,7 @@
 import styles from "./TopCollectors.module.scss";
 import classNames from "classnames";
 import { Grid,Container,Select,MenuItem } from "@mui/material";
-import CollectorColumns from "../collectors/CollectorColumn";
+import CollectorColumns from "./CollectorColumn";
 
 
 export default function TopCollectors({collectors=[]}) {
@@ -11,7 +11,6 @@ export default function TopCollectors({collectors=[]}) {
     collectors.map((el,index)=>el.id = index+1)
 
     const splitArr = chunk(collectors.slice(0,12),3)
-
 
     return (
         <div className={classNames(styles.wrapper)}>
