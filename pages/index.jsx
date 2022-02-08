@@ -12,6 +12,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
+import ProductImage from "../src/components/product/ProductImage";
 
 
 export default function Index() {
@@ -46,16 +47,18 @@ export default function Index() {
   ]
 
   return (
-    <div>
-      <Header />
-      <Featured items={featuredCards} />
-      <Trending cards={trendingCards} />
-      <TopCollectors collectors={userCards} />
-      <How title="How it works"
-        description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
-        items={howItemsArr} />
-      <Auctions cards={nftCards} />
-      <Footer />
-    </div>
+    // <div>
+    //   <Header />
+    //   <Featured items={featuredCards} />
+    //   <Trending cards={trendingCards} />
+    //   <TopCollectors collectors={userCards} />
+    //   <How title="How it works"
+    //     description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
+    //     items={howItemsArr} />
+    //   <Auctions cards={nftCards} />
+    //   <Footer />
+    // </div>
+
+    <ProductImage URL="https://eskipaper.com/images/large-2.jpg"/>
   );
 }
