@@ -12,7 +12,8 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
-import ProductImage from "../src/components/product/ProductImage";
+import ProductTitle from "../src/components/product/ProductTitle";
+
 
 
 export default function Index() {
@@ -58,7 +59,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-
-    <ProductImage url="https://eskipaper.com/images/large-2.jpg"/>
+    <ProductTitle text="Shallow Son"/>
   );
 }
