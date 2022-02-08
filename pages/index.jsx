@@ -59,6 +59,6 @@ export default function Index() {
     //   <Footer />
     // </div>
 
-    <ProductImage URL="https://eskipaper.com/images/large-2.jpg"/>
+    <ProductImage url="https://eskipaper.com/images/large-2.jpg"/>
   );
 }
