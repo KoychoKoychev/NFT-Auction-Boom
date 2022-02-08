@@ -25,7 +25,7 @@ export default function Trending({ cards = [] }) {
                     {cards.slice(0, 4).map((card) => {
                         return (
                             <Grid item >
-                                <Card name={card.name} user={card.user} mediaUrl={card.mediaUrl} price={card.price} currency={card.currency} />
+                                <Card name={card.name} likes={card.likes} user={{avatarUrl:card.owner.avatar.url, verified:card.owner.verified}} mediaUrl={card.source.url} price={card.price} currency={card.currency} />
                             </Grid>
                         )
                     })}

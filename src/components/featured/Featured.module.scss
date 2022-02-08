@@ -1,6 +1,10 @@
 @use "../../styles/colors";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
 
+.container{
+    margin-top: 150px;
+}
+
 .img_list{
     max-width: 1420px;
     overflow: hidden;

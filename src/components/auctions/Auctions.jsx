@@ -25,7 +25,7 @@ export default function Auctions({ cards = [] }) {
                     {cards.slice(0, 4).map((card) => {
                         return (
                             <Grid item >
-                                <Card name={card.name} user={card.user} mediaUrl={card.mediaUrl} price={card.price} currency={card.currency} timeLeft={card.timeLeft} />
+                                <Card name={card.name} user={{avatarUrl: card.owner.avatar.url, verified: card.owner.confirmed}} mediaUrl={card.source.url} price={card.price} likes={card.likes} currency={card.currency} timeLeft={card.timeLeft} />
                             </Grid>
                         )
                     })}

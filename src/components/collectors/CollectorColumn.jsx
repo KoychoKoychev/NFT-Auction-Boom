@@ -10,8 +10,8 @@ export default function CollectorColumn({items=[]}) {
                     <Collector
                     key={el.id} 
                     number={el.id} 
-                    name={el.name} 
-                    nftsCount={el.nftsCount} 
+                    name={el.username} 
+                    nftsCount={el.nfts.length} 
                     avatar={el.avatar}
                     verified={el.verified}
                     type={index===1 ? "light":"dark"}/>

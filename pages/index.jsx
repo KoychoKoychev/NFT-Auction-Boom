@@ -1,180 +1,61 @@
 import Example from "../src/components/example/Example";
 import TopCollectors from "../src/components/collectors/TopCollectors";
+import Header from "../src/components/header/Header";
+import Featured from "../src/components/featured/Featured";
+import Trending from "../src/components/trending/Trending";
+import How from "../src/components/how/How";
+import Auctions from "../src/components/auctions/Auctions";
+import Footer from "../src/components/footer/Footer";
+
+import dataFeatured from "../data/featured.json"
+import dataTrending from "../data/trending.json"
+import dataUsers from "../data/users.json"
+import dataNfts from "../data/nfts.json"
+import { useState, useEffect } from "react";
 
 
 export default function Index() {
-  const cardArr = [{
-    name: "Ivy",
-    user: {
-      avatarUrl: "images/avatar.png",
-      verified: true
-    },
-    mediaUrl: "images/nft.jpg",
-    price: 1,
-    currency: "ETH",
-    timeLeft: 10000
-  },
-  {
-    name: "Aongus",
-    user: {
-      avatarUrl: "images/avatar.png",
-      verified: true
-    },
-    mediaUrl: "images/nft.jpg",
-    price: 1,
-    currency: "ETH",
-    timeLeft: 9000
-  },
-  {
-    name: "Conor",
-    user: {
-      avatarUrl: "images/avatar.png",
-      verified: true
-    },
-    mediaUrl: "images/nft.jpg",
-    price: 1,
-    currency: "ETH",
-    timeLeft: 12000
-  },
-  {
-    name: "Liam",
-    user: {
-      avatarUrl: "images/avatar.png",
-      verified: true
-    },
-    mediaUrl: "images/nft.jpg",
-    price: 1,
-    currency: "ETH",
-    timeLeft: 69000
-  },
+
+  const [featuredCards, setFeaturedCards] = useState([]);
+  useEffect(() => {
+    setFeaturedCards(dataFeatured);
+  }, []);
+
+  const [trendingCards, setTrendingCards] = useState([]);
+  useEffect(() => {
+    setTrendingCards(dataTrending);
+  }, []);
+
+  const [userCards, setUserCards] = useState([]);
+  useEffect(() => {
+    setUserCards(dataUsers);
+  }, []);
+
+  const [nftCards, setNftCards] = useState([]);
+  useEffect(() => {
+    setNftCards(dataNfts);
+  }, []);
+
+  const howItemsArr = [
+    {title:"Digital Currency",
+    description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
+    {title:"Crypto Wallet",
+    description:"A crypto wallet, such as MetaMask, stores your ETH and processes transactions on the Ethereum blockchain."},
+    {title:"BUM.",
+    description:"Let's connect your wallet to BUM, edit your profile, and begin interacting in the space. "}
   ]
 
-  const itemsArr=[
-    {title:"Digital Currency",description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
-    {title:"Digital Currency",description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
-    {title:"Digital Currency",description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
-  ]
-
-  const imageArr=[
-    {
-      image:"https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=500",
-      title: "Breakfast",
-      rows: 2,
-      cols: 3,
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&h=500",
-      title: "Burger",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1522770179533-24471fcdba45?w=500&h=500",
-      title: "Camera",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?w=500&h=500",
-      title: "Coffee",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=500&h=500",
-      title: "Hats",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=500&h=500",
-      title: "Honey",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?w=500&h=500",
-      title: "Basketball",
-      href: "/about",
-    }
-  ]
-
-  const userArr=[
-    {
-      name: "terika77",
-      nftsCount: 134,
-      avatar: "/images/avatar.png",
-      verified: true,
-    },
-    {
-      name: "brendan_1",
-      nftsCount: 98,
-      avatar: "/images/avatar.png",
-      verified: false,
-    },
-    {
-      name: "damiann",
-      nftsCount: 97,
-      avatar: "/images/avatar.png",
-      verified: true,
-    },
-    {
-      name: "terika77",
-      nftsCount: 134,
-      avatar: "/images/avatar.png",
-      verified: true,
-    },
-    {
-      name: "brendan_1",
-      nftsCount: 98,
-      avatar: "/images/avatar.png",
-      verified: false,
-    },
-    {
-      name: "damiann",
-      nftsCount: 97,
-      avatar: "/images/avatar.png",
-      verified: true,
-    },
-    {
-      name: "terika77",
-      nftsCount: 134,
-      avatar: "/images/avatar.png",
-      verified: true,
-    },
-    {
-      name: "brendan_1",
-      nftsCount: 98,
-      avatar: "/images/avatar.png",
-      verified: false,
-    },
-    {
-      name: "damiann",
-      nftsCount: 97,
-      avatar: "/images/avatar.png",
-      verified: true,
-    },
-    {
-      name: "terika77",
-      nftsCount: 134,
-      avatar: "/images/avatar.png",
-      verified: true,
-    },
-    {
-      name: "brendan_1",
-      nftsCount: 98,
-      avatar: "/images/avatar.png",
-      verified: false,
-    },
-    {
-      name: "damiann",
-      nftsCount: 97,
-      avatar: "/images/avatar.png",
-      verified: true,
-    }
-  ]
-
-  return <TopCollectors collectors={userArr}/>;
+  return (
+    <div>
+      <Header />
+      <Featured items={featuredCards} />
+      <Trending cards={trendingCards} />
+      <TopCollectors collectors={userCards} />
+      <How title="How it works"
+        description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
+        items={howItemsArr} />
+      <Auctions cards={nftCards} />
+      <Footer />
+    </div>
+  );
 }

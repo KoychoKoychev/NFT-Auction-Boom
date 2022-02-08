@@ -13,7 +13,7 @@ export default function Collector({name,avatar,verified=false,type,nftsCount="",
                     {number}
                 </Grid>
                 <Grid item className={classNames(styles.col_info)}>
-                    <User name={name} info={nftsCount} avatar={avatar} verified={verified}/>
+                    <User name={name} info={nftsCount} avatar={avatar.url} verified={verified}/>
                 </Grid>
             </Grid>
         </div>
