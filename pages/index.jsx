@@ -12,8 +12,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
-import ProductInfoTitle from "../src/components/product/ProductInfoTitle";
-import ProductInfoPrice from "../src/components/product/ProductInfoPrice";
+import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 
 
 
@@ -60,6 +59,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductInfoPrice amount="3" currency="eth"/>
+    <ProductInfoStatus/>
   );
 }
