@@ -12,7 +12,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
-import ProductTitle from "../src/components/product/ProductTitle";
+import ProductInfoTitle from "../src/components/product/ProductInfoTitle";
 
 
 
@@ -59,6 +59,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductTitle text="Shallow Son"/>
+    <ProductInfoTitle text="Shallow Son"/>
   );
 }
