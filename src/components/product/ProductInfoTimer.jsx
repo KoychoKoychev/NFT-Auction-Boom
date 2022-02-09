@@ -8,7 +8,7 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
     const endDate = new Date(timeEnd)
     const [liveState, setLiveState] = useState((timeEnd!==undefined && endDate>Date.now())?true:false)
 
-    if(liveState){
+    if(liveState && timeEnd!=undefined){
         return (
             <div className={classNames(styles["product-info-timer"], liveState ? styles.active : null)}>
             <p className={classNames(styles.title)}>ENDS IN</p>
