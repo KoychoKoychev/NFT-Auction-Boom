@@ -1,0 +1,27 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.product-info-creator{
+    width: 340px;
+    height: 118px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: colors.$background_paper;
+}
+
+.product-info-creator .title{
+    margin: 0;
+    background-color: rgba(colors.$primary_main, 10%);
+    padding: 10px 0px 5px 27px;
+    text-align: left;
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    color: colors.$text_secondary;
+}
+
+.product-info-creator .user-container{
+    margin: 19px 0px 0px 27px;
+}

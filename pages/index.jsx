@@ -14,6 +14,7 @@ import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
 import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
+import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
 
 
 
@@ -60,6 +61,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductInfoLikes amount={1100}/>
+    <ProductInfoCreator name="toadnft" verified={false} avatar="/images/avatar.png"/>
   );
 }
