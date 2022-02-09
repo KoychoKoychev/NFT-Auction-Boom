@@ -15,6 +15,7 @@ import { useState, useEffect } from "react";
 import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
 import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
+import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 
 
 
@@ -61,6 +62,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductInfoCreator name="toadnft" verified={false} avatar="/images/avatar.png"/>
+    <ProductInfoTimer timeEnd={"February 9, 2022 14:30:30"}/>
   );
 }
