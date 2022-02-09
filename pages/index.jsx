@@ -62,6 +62,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductInfoTimer timeEnd={null}/>
+    <ProductInfoTimer timeEnd={"February 9, 2022 14:30:30"}/>
   );
 }
