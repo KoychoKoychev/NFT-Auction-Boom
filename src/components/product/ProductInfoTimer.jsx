@@ -6,22 +6,23 @@ import Countdown from "react-countdown";
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
 
     const endDate = new Date(timeEnd)
-    const [liveState, setLiveState] = useState((timeEnd && endDate>Date.now())?true:false)
+    const [liveState, setLiveState] = useState((timeEnd!==undefined && endDate>Date.now())?true:false)
 
     if(liveState){
-
         return (
-            <div className={classNames(styles["product-info-timer"], liveState ? null : styles.hidden)}>
+            <div className={classNames(styles["product-info-timer"], liveState ? styles.active : null)}>
             <p className={classNames(styles.title)}>ENDS IN</p>
             <Countdown
                 daysInHours={true}
                 className={classNames(styles.timer)}
                 date={endDate}
                 onStart={() => timeEnd ? setLiveState(true) : null}
-                onComplete={() => {
-                    setLiveState(false);
-                    onTimeEnd?onTimeEnd():null;
-                }} />
+                onComplete={onTimeEnd}
+                // onComplete={() => {
+                //     setLiveState(false);
+                //     onTimeEnd?onTimeEnd():null;
+                // }} 
+                />
         </div>
     )
     }else{
