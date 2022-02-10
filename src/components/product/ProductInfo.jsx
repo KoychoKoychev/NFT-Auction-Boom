@@ -2,11 +2,11 @@ import styles from "./ProductInfo.module.scss";
 import classNames from "classnames";
 import ProductInfoTitle from "./ProductInfoTitle";
 import ProductInfoPrice from "./ProductInfoPrice";
-import { Grid, Stack } from "@mui/material";
 import ProductInfoStatus from "./ProductInfoStatus";
 import ProductInfoLikes from "./ProductInfoLikes";
 import ProductInfoCreator from "./ProductInfoCreator";
 import ProductInfoTimer from "./ProductInfoTimer";
+import { Grid, Stack } from "@mui/material";
 
 export default function ProductInfo({ title, creator, price, currency, likes, onTimeEnd, timeEnd, isLive }) {
 

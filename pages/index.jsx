@@ -12,10 +12,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
-import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
-import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
-import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
-import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
+
 import ProductInfo from "../src/components/product/ProductInfo";
 
 
