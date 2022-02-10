@@ -11,7 +11,7 @@ import ProductInfoTimer from "./ProductInfoTimer";
 export default function ProductInfo({ title, creator, price, currency, likes, onTimeEnd, timeEnd, isLive }) {
 
     return (
-        <div className={classNames(styles["product-info"], "product-info")}>
+        <div className={classNames(styles["product-info"])}>
             <div className={classNames(styles.product_title)}>
                 <ProductInfoTitle text={title} />
             </div>
@@ -31,5 +31,5 @@ export default function ProductInfo({ title, creator, price, currency, likes, on
                 </Grid>
             </Grid>
         </div>
-    )
+    );
 }
