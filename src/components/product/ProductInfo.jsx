@@ -9,9 +9,9 @@ import ProductInfoCreator from "./ProductInfoCreator";
 import ProductInfoTimer from "./ProductInfoTimer";
 
 export default function ProductInfo({ title, creator, price, currency, likes, onTimeEnd, timeEnd, isLive }) {
-
+    
     return (
-        <div className="product-info">
+        <div className={classNames(styles["product-info"])}>
             <div className={classNames(styles.product_title)}>
                 <ProductInfoTitle text={title} />
             </div>
