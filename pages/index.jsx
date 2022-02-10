@@ -60,6 +60,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductInfo title="Shallow Son" price="3" currency="ETH" likes="1100" isLive={false} creator="toadnft" timeEnd="2022-02-13T03:24:00"/>
+    <ProductInfo title="Shallow Son" price="3" currency="ETH" likes="1100" isLive={0} creator="toadnft" timeEnd="2022-02-13T03:24:00"/>
   );
 }
