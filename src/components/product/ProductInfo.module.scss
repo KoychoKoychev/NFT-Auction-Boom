@@ -1,0 +1,28 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.product-info{
+    width: 577px;
+    margin-left: 50px;
+}
+
+.product-info .product_title{
+    padding-bottom: 28px;
+    border-bottom: 3px solid rgba(colors.$primary_main, 0.2);
+}
+
+.product-info .stats{
+    display: inline-flex;
+    margin-top: 15px;
+    margin-right: 6px;
+}
+
+.product-info .product_stats{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-info .product_grid{
+    padding-top: 12px;
+    padding-right: 10px;
+}

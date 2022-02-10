@@ -16,6 +16,7 @@ import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
 import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
+import ProductInfo from "../src/components/product/ProductInfo";
 
 
 
@@ -62,6 +63,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductInfoTimer timeEnd={"February 9, 2022 14:30:30"}/>
+    <ProductInfo title="Shallow Son" price="3" currency="ETH" likes="1100" isLive={false} creator="toadnft" timeEnd="2022-02-13T03:24:00"/>
   );
 }

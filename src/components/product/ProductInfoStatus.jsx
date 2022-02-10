@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Chip } from "@mui/material";
 import CircleIcon from '@mui/icons-material/Circle';
 
-export default function ProductInfoStatus(props) {
+export default function ProductInfoStatus() {
     return (
         <div className={classNames(styles["product-info-status"])}>
             <Chip 
