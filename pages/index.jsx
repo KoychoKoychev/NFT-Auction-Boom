@@ -14,6 +14,7 @@ import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
 
 import ProductInfo from "../src/components/product/ProductInfo";
+import ProductTabs from "../src/components/product/ProductTabs";
 
 
 
@@ -48,6 +49,54 @@ export default function Index() {
     description:"Let's connect your wallet to BUM, edit your profile, and begin interacting in the space. "}
   ]
 
+  const bidsArr = [
+    {
+      "user":{
+        "avatar":"/images/avatar.png",
+        "name":"Cupcat NFT",
+        "verified":true
+      },
+      "amount":1,
+      "date":"2022-01-22T08:29:19.930Z"
+    },
+    {
+      "user":{
+        "avatar":"/images/avatar.png",
+        "name":"Cupcat NFT",
+        "verified":false
+      },
+      "amount":3,
+      "date":"2022-02-12T01:29:19.930Z"
+    },
+    {
+      "user":{
+        "avatar":"/images/avatar.png",
+        "name":"Cupcat NFT",
+        "verified":false
+      },
+      "amount":3,
+      "date":"2022-02-12T01:29:19.930Z"
+    },
+    {
+      "user":{
+        "avatar":"/images/avatar.png",
+        "name":"Cupcat NFT",
+        "verified":false
+      },
+      "amount":3,
+      "date":"2022-02-12T01:29:19.930Z"
+    },
+    {
+      "user":{
+        "avatar":"/images/avatar.png",
+        "name":"Cupcat NFT",
+        "verified":false
+      },
+      "amount":3,
+      "date":"2022-02-12T01:29:19.930Z"
+    }
+  ]
+
   return (
     // <div>
     //   <Header />
@@ -60,6 +109,6 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductInfo title="Shallow Son" price="3" currency="ETH" likes="1100" isLive={0} creator="toadnft" timeEnd="2022-02-13T03:24:00"/>
+    <ProductTabs text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu pharetra eros, quis ullamcorper felis. Maecenas et euismod nunc. Donec ex felis, scelerisque eu elementum sit amet, tincidunt vel nisi. In ullamcorper efficitur purus, vel fringilla felis tristique non. Etiam suscipit leo et augue euismod tristique. Quisque facilisis dui eget."} bids={bidsArr}/>
   );
 }
