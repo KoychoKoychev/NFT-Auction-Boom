@@ -21,10 +21,6 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
                     date={endDate}
                     onStart={() => timeEnd ? setLiveState(true) : null}
                     onComplete={onTimeEnd}
-                // onComplete={() => {
-                //     setLiveState(false);
-                //     onTimeEnd?onTimeEnd():null;
-                // }} 
                 />
             </div>
         )

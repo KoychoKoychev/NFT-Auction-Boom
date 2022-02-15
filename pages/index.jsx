@@ -16,6 +16,7 @@ import { useState, useEffect } from "react";
 import ProductInfo from "../src/components/product/ProductInfo";
 import ProductTabs from "../src/components/product/ProductTabs";
 import ProductActions from "../src/components/product/ProductActions";
+import ProductContainer from "../src/components/product/ProductContainer";
 
 
 
@@ -111,6 +112,16 @@ export default function Index() {
     //   <Footer />
     // </div>
     // <ProductTabs text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu pharetra eros, quis ullamcorper felis. Maecenas et euismod nunc. Donec ex felis, scelerisque eu elementum sit amet, tincidunt vel nisi. In ullamcorper efficitur purus, vel fringilla felis tristique non. Etiam suscipit leo et augue euismod tristique. Quisque facilisis dui eget."} bids={bidsArr}/>
-    <ProductActions isLive={true} currency="ETH" buyAmount={3} bidAmount={1}/>
+    <ProductContainer 
+    name="Shallow Son" 
+    source={{"url":"https://i.imgur.com/aENxJpP.jpg"}} 
+    owner={{username:"toadnft",verified:false, avatar:{"url":"/images/avatar.png"}}}
+    price = {3}
+    currency = "ETH"
+    likes={1100}
+    auction_end="2022-02-17T03:24:00"
+    details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu pharetra eros, quis ullamcorper felis. Maecenas et euismod nunc. Donec ex felis, scelerisque eu elementum sit amet, tincidunt vel nisi. In ullamcorper efficitur purus, vel fringilla felis tristique non. Etiam suscipit leo et augue euismod tristique. Quisque facilisis dui eget."
+    bids={bidsArr}
+    />
   );
 }

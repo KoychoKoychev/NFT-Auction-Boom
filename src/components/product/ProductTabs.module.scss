@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
 
 .product-tabs{
-    margin: 50px 50px;
+    margin: 85px 45px;
     width: 578px;
 }
 
@@ -37,11 +37,13 @@
     padding: 0;
     padding-top: 39px;
     width: 95%;
+    height: 295px;
 }
 
 .product-tabs .tab-bids-table{
     margin: 0;
     padding: 0;
+    height: 295px;
 }
 
 .product-tabs .tab-bids-table *{

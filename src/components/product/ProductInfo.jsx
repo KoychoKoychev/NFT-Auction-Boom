@@ -22,11 +22,11 @@ export default function ProductInfo({ title, creator, price, currency, likes, on
                     <ProductInfoLikes amount={likes} />
                 </Stack>
             </div>
-            <Grid container columnGap={2} alignItems="flex-end" className={classNames(styles.product_grid)}>
+            <Grid container spacing={2} alignItems="flex-end" className={classNames(styles.product_grid)}>
                 <Grid item xs={7}>
                     <ProductInfoCreator name={creator.name} avatar={creator.avatar} verified={creator.verified} />
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={5}>
                     <ProductInfoTimer onTimeEnd={onTimeEnd} timeEnd={timeEnd} />
                 </Grid>
             </Grid>
