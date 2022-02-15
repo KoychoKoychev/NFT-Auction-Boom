@@ -28,7 +28,7 @@ export default function ProductTabs({ text, bids }) {
                     <Table aria-label="bids table">
                         {bids.map((bid, i) => {
                             return (
-                                <TableRow key={i} className={classNames(styles[`table-row-${i}`])}>
+                                <TableRow key={i} className={`table-row-${i}`}>
                                     <TableCell className={classNames(styles[`table-cell-1`])}>
                                         <User name={bid.user.name} avatar={bid.user.avatar} size="34" verified={bid.user.verified} />
                                     </TableCell>
