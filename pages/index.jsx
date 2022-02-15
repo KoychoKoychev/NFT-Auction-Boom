@@ -119,7 +119,7 @@ export default function Index() {
     price = {3}
     currency = "ETH"
     likes={1100}
-    auction_end="2022-02-17T03:24:00"
+    auction_end="2022-02-15T19:05:50"
     details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu pharetra eros, quis ullamcorper felis. Maecenas et euismod nunc. Donec ex felis, scelerisque eu elementum sit amet, tincidunt vel nisi. In ullamcorper efficitur purus, vel fringilla felis tristique non. Etiam suscipit leo et augue euismod tristique. Quisque facilisis dui eget."
     bids={bidsArr}
     />
