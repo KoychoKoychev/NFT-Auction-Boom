@@ -15,6 +15,7 @@ import { useState, useEffect } from "react";
 
 import ProductInfo from "../src/components/product/ProductInfo";
 import ProductTabs from "../src/components/product/ProductTabs";
+import ProductActions from "../src/components/product/ProductActions";
 
 
 
@@ -109,6 +110,7 @@ export default function Index() {
     //   <Auctions cards={nftCards} />
     //   <Footer />
     // </div>
-    <ProductTabs text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu pharetra eros, quis ullamcorper felis. Maecenas et euismod nunc. Donec ex felis, scelerisque eu elementum sit amet, tincidunt vel nisi. In ullamcorper efficitur purus, vel fringilla felis tristique non. Etiam suscipit leo et augue euismod tristique. Quisque facilisis dui eget."} bids={bidsArr}/>
+    // <ProductTabs text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu pharetra eros, quis ullamcorper felis. Maecenas et euismod nunc. Donec ex felis, scelerisque eu elementum sit amet, tincidunt vel nisi. In ullamcorper efficitur purus, vel fringilla felis tristique non. Etiam suscipit leo et augue euismod tristique. Quisque facilisis dui eget."} bids={bidsArr}/>
+    <ProductActions isLive={false} currency="ETH" buyAmount={3} bidAmount={1}/>
   );
 }
