@@ -32,7 +32,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
     }
 
     return (
-        <Container className={classNames(styles["product-container"],"product-container")} maxWidth="xl">
+        <Container className={classNames(styles["product-container"])} maxWidth="xl">
             <Grid container justifyContent={"space-around"}>
                 <Grid item xs={6}>
                     <ProductImage url={source.url}/>
