@@ -17,6 +17,7 @@ export default function ProductActions({ isLive, currency, buyAmount, bidAmount,
                     <Button 
                     onClick={onBid}
                     variant="outlined"
+                    color="success"
                     disabled={!isLive}
                     className={classNames(styles["bid-button"], styles.button)}>PLACE BID FOR {bidAmount} {currency}</Button>
                 </Grid>
