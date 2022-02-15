@@ -1,6 +1,6 @@
 import styles from "./ProductContainer.module.scss";
 import classNames from "classnames";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
 import ProductTabs from "./ProductTabs";
@@ -32,7 +32,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
     }
 
     return (
-        <Container className={classNames(styles["product-container"])} maxWidth="xl">
+        <div className={classNames(styles["product-container"])}>
             <Grid container justifyContent={"space-around"}>
                 <Grid item xs={6}>
                     <ProductImage url={source.url}/>
@@ -52,6 +52,6 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
                     <ProductActions isLive={isLive} currency={currency} buyAmount={price} bidAmount={bidAmount} onBid={onBid} onBuy={onBuy}/>
                 </Grid>
             </Grid>
-        </Container>
+        </div>
     )
 }

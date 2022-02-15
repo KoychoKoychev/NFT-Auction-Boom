@@ -1,11 +1,5 @@
-@use "../../styles/colors";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
-@font-face {
-    font-family: "laca";
-    src: url("/fonts/Laca\ Bold.woff") format('woff');
-}
-
 .product-container{
     background-color: transparent;
-    margin: 0;
+    margin: 0 auto;
+    width: 75vw;
 }
