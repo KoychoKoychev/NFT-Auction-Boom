@@ -11,6 +11,7 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
         setLiveState((timeEnd && endDate > Date.now()) ? true : false);
     }, [timeEnd])
 
+
     if (timeEnd && liveState) {
         return (
             <div className={classNames(styles["product-info-timer"], liveState ? styles.active : null)}>
@@ -19,6 +20,7 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
                     daysInHours={true}
                     className={classNames(styles.timer)}
                     date={endDate}
+                    autoStart={true}
                     onStart={() => timeEnd ? setLiveState(true) : null}
                     onComplete={onTimeEnd}
                 />

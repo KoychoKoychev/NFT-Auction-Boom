@@ -11,7 +11,7 @@ export default function ProductInfoLikes({ amount = 0 }) {
                 className={classNames(styles.likes)}
                 label={millify(Number(amount),{lowercase:true})}
                 variant="outlined"
-                clickable="true"
+                clickable={true}
                 icon={<FavoriteIcon className={classNames(styles.hearthIcon)} fontSize="inherit" />}
             />
         </div>

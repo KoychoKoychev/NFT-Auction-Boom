@@ -37,7 +37,7 @@ export default function Card({ name = "", likes = 0, mediaUrl = "", user = { ava
                     className={classNames(styles.likes)}
                     label={millify(Number(likes))}
                     variant="outlined"
-                    clickable="true"
+                    clickable={true}
                     icon={<FavoriteIcon className={classNames(styles.hearthIcon)} fontSize="inherit"/>}
                 />
             </div>

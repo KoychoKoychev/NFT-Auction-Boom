@@ -22,9 +22,9 @@ export default function Trending({ cards = [] }) {
                     </Select>
                 </div>
                 <Grid container spacing={2}>
-                    {cards.slice(0, 4).map((card) => {
+                    {cards.slice(0, 4).map((card,index) => {
                         return (
-                            <Grid item >
+                            <Grid item key={index}>
                                 <Card name={card.name} likes={card.likes} user={{avatarUrl:card.owner.avatar.url, verified:card.owner.verified}} mediaUrl={card.source.url} price={card.price} currency={card.currency} />
                             </Grid>
                         )

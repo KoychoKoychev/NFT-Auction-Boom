@@ -22,9 +22,9 @@ export default function Auctions({ cards = [] }) {
                     </Select>
                 </div>
                 <Grid container spacing={2}>
-                    {cards.slice(0, 4).map((card) => {
+                    {cards.slice(0, 4).map((card,index) => {
                         return (
-                            <Grid item >
+                            <Grid item key={index}>
                                 <Card name={card.name} user={{avatarUrl: card.owner.avatar.url, verified: card.owner.confirmed}} mediaUrl={card.source.url} price={card.price} likes={card.likes} currency={card.currency} timeLeft={card.timeLeft} />
                             </Grid>
                         )

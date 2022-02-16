@@ -15,7 +15,7 @@ export default function How({description="",title="",items=[],link="#"}) {
             <Grid container spacing={2.5}>
                 {items.slice(0,3).map((el,index)=>{
                     return(
-                        <Grid item>
+                        <Grid item key={index}>
                             <Step number={index+1} title={el.title} description={el.description}/>
                         </Grid>
                     )

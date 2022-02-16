@@ -13,7 +13,7 @@ export default function Featured({items=[]}) {
                 {items.map((el,index)=>{
                     return(
                         <ImageListItem className={classNames(styles.img_item)} key={index} cols={index===0?3:1} rows={index===0?2:1 || 1}>
-                            <img src={el.source.url} alt={el.name} onClick={()=>router.push(el.href || "/")}/>
+                            <img src={el.source.url} alt={el.name} onClick={()=>router.push(`/product/${el.id}`)}/>
                         </ImageListItem>
                     )
                 })}

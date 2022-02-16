@@ -10,16 +10,16 @@ import { useEffect } from "react";
 import { parseISO } from "date-fns";
 
 
-export default function ProductContainer({ name, owner, price, currency, likes, auction_end, details, source, bids}) {
+export default function ProductContainer({ name="", owner, price, currency, likes, auction_end, details, source, bids}) {
 
     const [isLive,setLiveState] = useState(true);
     useEffect(()=>{
         if(Date.now() >= new Date(parseISO(auction_end))){
             setLiveState(false)
         }
-    },[isLive])
+    },[auction_end])
 
-    const bidAmount = Math.max(...bids.map(el=>Number(el.amount)))
+    const bidAmount = bids.lenght > 0 ? Math.max(...bids.map(el=>Number(el.amount))) : 0.01;
 
     function onBid() {}
 
@@ -49,7 +49,12 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
                     onTimeEnd={onTimeEnd}
                     />
                     <ProductTabs text={details} bids={bids}/>
-                    <ProductActions isLive={isLive} currency={currency} buyAmount={price} bidAmount={bidAmount} onBid={onBid} onBuy={onBuy}/>
+                    <ProductActions isLive={isLive}
+                     currency={currency} 
+                     buyAmount={price} 
+                     bidAmount={bidAmount} 
+                     onBid={onBid} 
+                     onBuy={onBuy}/>
                 </Grid>
             </Grid>
         </div>

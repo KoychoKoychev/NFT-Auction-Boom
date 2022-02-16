@@ -30,9 +30,9 @@ export default function TopCollectors({collectors=[]}) {
                     </Select>
                 </div>
                 <Grid container spacing={2}>
-                    {splitArr.map((el) => {
+                    {splitArr.map((el,index) => {
                         return (
-                            <Grid item >
+                            <Grid item key={index}>
                                 <CollectorColumn key={el.id} items={el}/>
                             </Grid>
                         )
