@@ -1,0 +1,40 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.description{
+    width: 50vw;
+    margin: -112px auto 0 auto;
+    padding: 64px 76px 86px 66px;
+    background-color: colors.$background_paper;
+}
+
+.description .text{
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: colors.$text_secondary;
+}
+
+.description .image{
+    aspect-ratio: 1;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.description .img_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 61px;
+    width: 100%;
+    overflow: hidden;
+    height: 241px;
+    background: rgba(0, 0, 0, 0.22);
+    border-radius: 15px;
+}
