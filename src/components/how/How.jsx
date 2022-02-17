@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Step from "./Step";
 
 
-export default function How({description="",title="",items=[],link="#"}) {
+export default function How({description="",title="",items=[],link="/how"}) {
     return(
         <div className={classNames(styles.wrapper)}>
             <div className={classNames(styles.how_info)}>
