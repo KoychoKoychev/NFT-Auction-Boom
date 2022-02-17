@@ -19,7 +19,6 @@ export default function Product() {
 
     useEffect(() => {
         setNftCards(dataNfts);
-
     }, [id]);
     
     useEffect(() => {

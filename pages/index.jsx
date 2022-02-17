@@ -11,6 +11,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
+import Hero from "../src/components/hero/Hero";
 
 export default function Index() {
 
@@ -92,27 +93,17 @@ export default function Index() {
   ]
 
   return (
-    <div>
-      <Header />
-      <Featured items={featuredCards} />
-      <Trending cards={trendingCards} />
-      <TopCollectors collectors={userCards} />
-      <How title="How it works"
-        description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
-        items={howItemsArr} />
-      <Auctions cards={nftCards} />
-      <Footer />
-    </div>
-    // <ProductContainer 
-    // name="Shallow Son" 
-    // source={{"url":"https://i.imgur.com/aENxJpP.jpg"}} 
-    // owner={{username:"toadnft",verified:false, avatar:{"url":"/images/avatar.png"}}}
-    // price = {3}
-    // currency = "ETH"
-    // likes={1100}
-    // auction_end="2022-02-15T19:45:50"
-    // details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu pharetra eros, quis ullamcorper felis. Maecenas et euismod nunc. Donec ex felis, scelerisque eu elementum sit amet, tincidunt vel nisi. In ullamcorper efficitur purus, vel fringilla felis tristique non. Etiam suscipit leo et augue euismod tristique. Quisque facilisis dui eget."
-    // bids={bidsArr}
-    // />
+    // <div>
+    //   <Header />
+    //   <Featured items={featuredCards} />
+    //   <Trending cards={trendingCards} />
+    //   <TopCollectors collectors={userCards} />
+    //   <How title="How it works"
+    //     description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
+    //     items={howItemsArr} />
+    //   <Auctions cards={nftCards} />
+    //   <Footer />
+    // </div>
+    <Hero text="How it works"/>
   );
 }
