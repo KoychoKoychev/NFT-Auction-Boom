@@ -13,6 +13,7 @@ import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
 import Hero from "../src/components/hero/Hero";
 import Description from "../src/components/description/Description";
+import ProfileHero from "../src/components/profile/ProfileHero";
 
 export default function Index() {
 
@@ -95,7 +96,7 @@ export default function Index() {
 
   return (
     <div>
-      <Header />
+      {/* <Header />
       <Featured items={featuredCards} />
       <Trending cards={trendingCards} />
       <TopCollectors collectors={userCards} />
@@ -103,7 +104,8 @@ export default function Index() {
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
       <Auctions cards={nftCards} />
-      <Footer />
+      <Footer /> */}
+      <ProfileHero image={"https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80"}/>
     </div>
   );
 }
