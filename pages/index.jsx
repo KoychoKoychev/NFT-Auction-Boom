@@ -15,6 +15,7 @@ import Hero from "../src/components/hero/Hero";
 import Description from "../src/components/description/Description";
 import ProfileHero from "../src/components/profile/ProfileHero";
 import ProfileUser from "../src/components/profile/ProfileUser";
+import ProfileCollectionFilters from "../src/components/profile/ProfileCollectionFilters";
 
 export default function Index() {
 
@@ -95,6 +96,18 @@ export default function Index() {
     }
   ]
 
+  const filterObj = {
+    sort: [
+      { label: "Name (Ascending)", value: 1 },
+      { label: "Name (Descending)", value: 2 },
+    ],
+    price: [
+      { label: "0.3 - 0.5 ETH", value: 3 },
+      { label: "0.5 - 2 ETH", value: 4, },
+      { label: "2- 3 ETH", value: 5, },
+    ],
+  }
+
   return (
     <div>
       {/* <Header />
@@ -106,10 +119,7 @@ export default function Index() {
         items={howItemsArr} />
       <Auctions cards={nftCards} />
       <Footer /> */}
-      <ProfileUser name={"fredrika_a"} 
-      info={"What are they they are the broken promise and to do is out of reach. Hand over the candy notes food is so expensive to the Cashier."}
-      avatar={"/images/avatar.png"}
-      verified={true}/>
+      <ProfileCollectionFilters filters={filterObj}/>
     </div>
   );
 }
