@@ -21,7 +21,7 @@
     padding-left: 20px;
 }
 
-.profile-collection-filters .profile-select-sort:hover{
+.profile-collection-filters .profile-select-sort{
     border: none;
 }
 
@@ -41,4 +41,8 @@
     background-color: colors.$background_paper;
     border-radius: 30px;
     padding: 10px 20px;
+
+    *::before,*::after{
+        border: none !important;
+    }
 }
