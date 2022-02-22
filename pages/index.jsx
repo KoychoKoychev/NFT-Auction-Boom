@@ -14,6 +14,7 @@ import { useState, useEffect } from "react";
 import Hero from "../src/components/hero/Hero";
 import Description from "../src/components/description/Description";
 import ProfileHero from "../src/components/profile/ProfileHero";
+import ProfileUser from "../src/components/profile/ProfileUser";
 
 export default function Index() {
 
@@ -105,7 +106,10 @@ export default function Index() {
         items={howItemsArr} />
       <Auctions cards={nftCards} />
       <Footer /> */}
-      <ProfileHero image={"https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80"}/>
+      <ProfileUser name={"fredrika_a"} 
+      info={"What are they they are the broken promise and to do is out of reach. Hand over the candy notes food is so expensive to the Cashier."}
+      avatar={"/images/avatar.png"}
+      verified={true}/>
     </div>
   );
 }
