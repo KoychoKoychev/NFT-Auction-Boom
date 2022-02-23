@@ -1,0 +1,20 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.profile-collection{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.profile-collection .title{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+}
+
+.profile-collection .filters{
+    margin-top: 100px;
+}
+

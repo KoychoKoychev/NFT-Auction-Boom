@@ -13,9 +13,7 @@ import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
 import Hero from "../src/components/hero/Hero";
 import Description from "../src/components/description/Description";
-import ProfileHero from "../src/components/profile/ProfileHero";
-import ProfileUser from "../src/components/profile/ProfileUser";
-import ProfileCollectionFilters from "../src/components/profile/ProfileCollectionFilters";
+import ProfileCollection from "../src/components/profile/ProfileCollection";
 
 export default function Index() {
 
@@ -108,6 +106,13 @@ export default function Index() {
     ],
   }
 
+  const userObj = {
+    name:'fredrika_a',
+    info: 'Lorem Ipsum',
+    avatar: '/images/avatar.png', 
+    verified: true
+  }
+
   return (
     <div>
       {/* <Header />
@@ -119,7 +124,7 @@ export default function Index() {
         items={howItemsArr} />
       <Auctions cards={nftCards} />
       <Footer /> */}
-      <ProfileCollectionFilters filters={filterObj}/>
+      <ProfileCollection filter={filterObj} user={userObj} items={nftCards}/>
     </div>
   );
 }
