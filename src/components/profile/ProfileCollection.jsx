@@ -20,10 +20,10 @@ export default function ProfileCollection({ user, filters, items }) {
                         <ProfileCollectionFilters filters={filters} />
                     </Grid>
                 </Grid>
-                <Grid container rowSpacing={2} className={classNames(styles.cards)}>
+                <Grid container rowSpacing={2}>
                     {items.map((el, index) => {
                         return (
-                            <Grid item xs='3' key={index}>
+                            <Grid item xs='3' key={index} className={classNames(styles.cards)}>
                                 <Card name={el.name}
                                     likes={el.likes}
                                     mediaUrl={el.mediaUrl}

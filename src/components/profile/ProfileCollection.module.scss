@@ -24,12 +24,18 @@
 
 }
 
-.profile-collection .wrapper .cards{
-    margin: 0 auto;
-}
-
 .profile-collection .user{
     display: flex;
     width: 100%;
+    justify-content: center;
+}
+
+.profile-collection .wrapper .cards:nth-child(4n){
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-collection .wrapper .cards:nth-child(4n+2), .profile-collection .wrapper .cards:nth-child(4n+3){
+    display: flex;
     justify-content: center;
 }
