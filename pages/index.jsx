@@ -124,7 +124,7 @@ export default function Index() {
         items={howItemsArr} />
       <Auctions cards={nftCards} />
       <Footer /> */}
-      <ProfileCollection filter={filterObj} user={userObj} items={nftCards}/>
+      <ProfileCollection filters={filterObj} user={userObj} items={nftCards}/>
     </div>
   );
 }

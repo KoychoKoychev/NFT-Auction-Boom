@@ -3,7 +3,6 @@
 
 .profile-collection{
     width: 100vw;
-    margin: 0 auto;
 }
 
 .profile-collection .title{
@@ -16,5 +15,21 @@
 
 .profile-collection .filters{
     margin-top: 100px;
+    margin-bottom: 20px;
 }
 
+.profile-collection .filters .sort{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.profile-collection .wrapper .cards{
+    margin: 0 auto;
+}
+
+.profile-collection .user{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
