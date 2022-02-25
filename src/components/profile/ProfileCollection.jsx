@@ -26,11 +26,11 @@ export default function ProfileCollection({ user, filters, items }) {
                             <Grid item xs='3' key={index} className={classNames(styles.cards)}>
                                 <Card name={el.name}
                                     likes={el.likes}
-                                    mediaUrl={el.mediaUrl}
-                                    user={el.user}
+                                    mediaUrl={el.source.url}
+                                    user={{verified:user.verified, avatarUrl:user.avatar}}
                                     price={el.price}
                                     currency={el.currency}
-                                    timeLeft={el.timeLeft}
+                                    timeLeft={new Date(el.auction_end) - Date.now()}
                                 />
                             </Grid>)
                     })}

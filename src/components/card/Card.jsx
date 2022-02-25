@@ -25,7 +25,7 @@ export default function Card({ name = "", likes = 0, mediaUrl = "", user = { ava
                 daysInHours={true} 
                 className={classNames(styles.countdown, cardState?null:styles.hidden)} 
                 date={Date.now() + timeLeft}
-                onStart={()=>timeLeft?setCardState(true):null}
+                onStart={()=>timeLeft>0?setCardState(true):null}
                 onComplete={()=>setCardState(false)} />
             </div>
             <div className={classNames(styles.cardData)}>
