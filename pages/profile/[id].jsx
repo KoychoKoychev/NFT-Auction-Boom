@@ -1,9 +1,11 @@
+import * as React from 'react';
+import styles from "./profilePage.module.scss";
+import classNames from "classnames";
 import Footer from "../../src/components/footer/Footer";
 import Header from "../../src/components/header/Header";
 import ProfileCollection from "../../src/components/profile/ProfileCollection";
 import ProfileHero from "../../src/components/profile/ProfileHero";
 import ProfileUser from "../../src/components/profile/ProfileUser";
-import * as React from 'react';
 
 import dataProfile from "../../data/profile.json"
 import { useRouter } from "next/dist/client/router";
@@ -30,8 +32,6 @@ export default function Profile() {
         }
     }, [id]);
 
-    console.log(currProfile);
-    console.log(id);
 
     const filterObj = {
         sort: [
@@ -46,12 +46,16 @@ export default function Profile() {
       }
 
     return (
-        <div>
+        <div className={classNames(styles.profile_page)}>
             <Header />
             {itemLoaded
                 ? <React.Fragment>
                     <ProfileHero image={currProfile.avatar.backgroundUrl} />
-                    <ProfileUser name={currProfile.username} info={currProfile.info} avatar={currProfile.avatar.url} verified={currProfile.verified} />
+                    <ProfileUser 
+                    name={currProfile.username} 
+                    info={currProfile.info} 
+                    avatar={currProfile.avatar.url} 
+                    verified={currProfile.verified} />
                     <ProfileCollection 
                     user={{ name: currProfile.username, info: currProfile.info, avatar: currProfile.avatar.url, verified: currProfile.verified }}
                     filters={filterObj}

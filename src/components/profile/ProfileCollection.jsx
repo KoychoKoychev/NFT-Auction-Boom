@@ -9,9 +9,6 @@ export default function ProfileCollection({ user, filters, items }) {
     return (
         <div className={classNames(styles["profile-collection"])}>
             <Container maxWidth='xl' className={classNames(styles.wrapper)}>
-                <div className={classNames(styles.user)}>
-                <ProfileUser name={user.name} info={user.info} avatar={user.avatar} verified={user.verified} />
-                </div>
                 <Grid className={classNames(styles.filters)} container>
                     <Grid item xs='3'>
                         <Typography className={classNames(styles.title)} variant="h3">Collection</Typography>

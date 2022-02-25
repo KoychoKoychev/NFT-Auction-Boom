@@ -3,6 +3,7 @@
 
 .profile-collection{
     width: 100vw;
+    margin-bottom: 143px;
 }
 
 .profile-collection .title{
@@ -22,12 +23,6 @@
     display: flex;
     justify-content: flex-end;
 
-}
-
-.profile-collection .user{
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }
 
 .profile-collection .wrapper .cards:nth-child(4n){
