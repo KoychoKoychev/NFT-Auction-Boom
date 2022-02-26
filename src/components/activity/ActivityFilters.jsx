@@ -14,6 +14,8 @@ export default function ActivityFilters({filters}) {
                         labelId="select_sort_label"
                         id="select_sort"
                         label="Sort by_"
+                        variant="outlined"
+                        color="primary"
                     >
                         {filters.sort.map((el, index) => {
                             return (
@@ -28,7 +30,9 @@ export default function ActivityFilters({filters}) {
                         className={classNames(styles.select_price)}
                         labelId="select_price_label"
                         id="select_price"
-                        label="Type"
+                        label="Type_"
+                        variant="outlined"
+                        color="primary"
                     >
                         {filters.type.map((el, index) => {
                             return (

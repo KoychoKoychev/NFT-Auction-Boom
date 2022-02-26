@@ -11,7 +11,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
-import ActivityFilters from "../src/components/avtivity/ActivityFilters";
+import ActivityFilters from "../src/components/activity/ActivityFilters";
 
 
 export default function Index() {
