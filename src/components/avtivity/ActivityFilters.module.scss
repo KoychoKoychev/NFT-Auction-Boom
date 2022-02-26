@@ -1,0 +1,42 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+.activity-filters{
+    position: relative;
+}
+
+.activity-filters .profile-select-sort, .activity-filters .select_price{
+    width: 220px;
+    height: 50px;
+    color: colors.$text_secondary;
+    background-color: colors.$background_paper;
+    border-radius: 30px;
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 20px;
+}
+
+
+.activity-filters label{
+    margin-left: 0px;
+}
+
+.activity-filters svg{
+    color: colors.$text_secondary;
+}
+
+.activity-filters .text_input{
+    width: 330px;
+    height: 50px;
+    color: colors.$text_secondary;
+    background-color: colors.$background_paper;
+    border-radius: 30px;
+    padding: 10px 20px;
+
+    *::before,*::after{
+        border: none !important;
+    }
+}

@@ -11,6 +11,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
+import ActivityFilters from "../src/components/avtivity/ActivityFilters";
 
 
 export default function Index() {
@@ -36,69 +37,87 @@ export default function Index() {
   }, []);
 
   const howItemsArr = [
-    {title:"Digital Currency",
-    description:"You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
-    {title:"Crypto Wallet",
-    description:"A crypto wallet, such as MetaMask, stores your ETH and processes transactions on the Ethereum blockchain."},
-    {title:"BUM.",
-    description:"Let's connect your wallet to BUM, edit your profile, and begin interacting in the space. "}
+    {
+      title: "Digital Currency",
+      description: "You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"
+    },
+    {
+      title: "Crypto Wallet",
+      description: "A crypto wallet, such as MetaMask, stores your ETH and processes transactions on the Ethereum blockchain."
+    },
+    {
+      title: "BUM.",
+      description: "Let's connect your wallet to BUM, edit your profile, and begin interacting in the space. "
+    }
   ]
 
   const bidsArr = [
     {
-      "user":{
-        "avatar":"/images/avatar.png",
-        "name":"Cupcat NFT",
-        "verified":true
+      "user": {
+        "avatar": "/images/avatar.png",
+        "name": "Cupcat NFT",
+        "verified": true
       },
-      "amount":1,
-      "date":"2022-01-22T08:29:19.930Z"
+      "amount": 1,
+      "date": "2022-01-22T08:29:19.930Z"
     },
     {
-      "user":{
-        "avatar":"/images/avatar.png",
-        "name":"Cupcat NFT",
-        "verified":false
+      "user": {
+        "avatar": "/images/avatar.png",
+        "name": "Cupcat NFT",
+        "verified": false
       },
-      "amount":3,
-      "date":"2022-02-12T01:29:19.930Z"
+      "amount": 3,
+      "date": "2022-02-12T01:29:19.930Z"
     },
     {
-      "user":{
-        "avatar":"/images/avatar.png",
-        "name":"Cupcat NFT",
-        "verified":false
+      "user": {
+        "avatar": "/images/avatar.png",
+        "name": "Cupcat NFT",
+        "verified": false
       },
-      "amount":3,
-      "date":"2022-02-12T01:29:19.930Z"
+      "amount": 3,
+      "date": "2022-02-12T01:29:19.930Z"
     },
     {
-      "user":{
-        "avatar":"/images/avatar.png",
-        "name":"Cupcat NFT",
-        "verified":false
+      "user": {
+        "avatar": "/images/avatar.png",
+        "name": "Cupcat NFT",
+        "verified": false
       },
-      "amount":3,
-      "date":"2022-02-12T01:29:19.930Z"
+      "amount": 3,
+      "date": "2022-02-12T01:29:19.930Z"
     },
     {
-      "user":{
-        "avatar":"/images/avatar.png",
-        "name":"Cupcat NFT",
-        "verified":false
+      "user": {
+        "avatar": "/images/avatar.png",
+        "name": "Cupcat NFT",
+        "verified": false
       },
-      "amount":3,
-      "date":"2022-02-12T01:29:19.930Z"
+      "amount": 3,
+      "date": "2022-02-12T01:29:19.930Z"
     }
   ]
 
-
-
   const userObj = {
-    name:'fredrika_a',
+    name: 'fredrika_a',
     info: 'Lorem Ipsum',
-    avatar: '/images/avatar.png', 
+    avatar: '/images/avatar.png',
     verified: true
+  }
+
+  const filtersObj = {
+    sort: [
+      { label: "Name (Ascending)", value: 1 },
+      { label: "Name (Descending)", value: 2 },
+    ],
+    type: [
+      { label: "Liked", value: 3 },
+      {
+        label: "Bought",
+        value: 4,
+      },
+    ],
   }
 
   return (
@@ -111,6 +130,7 @@ export default function Index() {
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
       <Auctions cards={nftCards} />
+      <ActivityFilters filters={filtersObj} />
       <Footer />
     </div>
   );
