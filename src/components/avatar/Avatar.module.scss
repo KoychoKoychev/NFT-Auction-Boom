@@ -12,8 +12,8 @@
 
 .badge{
     position: absolute;
-    bottom: -5%;
-    right: min(-5%,-2px);
+    bottom: min(-5%,-5px);
+    right: min(-5%,-5px);
     width: 30%;
     min-width: 20px;
 }
