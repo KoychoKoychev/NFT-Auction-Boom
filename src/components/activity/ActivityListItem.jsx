@@ -12,8 +12,10 @@ export default function ActivityListItem({user,created_at,nft,type='like'}) {
                 <p className={classNames(styles["activity-action"])}>
                     <span className={classNames(styles.user)}>{user.name}</span>
                     {type=="like"?<span> liked </span>:<span> bought </span>}
+                    {/* TO DO CHANGE THE LINK HREF TO THE RIGHT ID ONCE THE API CALLS ARE INCLUDED */}
                     <Link className={classNames(styles.link)} href={`/product/${361}`}>{`\"${nft.name}\"`}</Link>
                     <span> by </span>
+                    {/* TO DO CHANGE THE LINK HREF TO THE RIGHT ID ONCE THE API CALLS ARE INCLUDED */}
                     <Link className={classNames(styles.link)} href={`/profile/${401}`}>{nft.owner.username}</Link>
                 </p>
                 <p className={classNames(styles["activity-time"])}> 

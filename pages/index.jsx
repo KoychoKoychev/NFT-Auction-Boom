@@ -134,10 +134,10 @@ export default function Index() {
         items={howItemsArr} />
       <Auctions cards={nftCards} />
       <ActivityListItem 
-      user={{avatar:{url:'/images/avatar.png'},verified: true,name: 'fredrika_a' }}
+      user={{avatar:{url:'/images/avatar.png'}, verified: true, name: 'fredrika_a' }}
       created_at='2022-02-28T08:29:19.930Z'
       nft={{name:'Dog Bone',owner:{username:'Antonio Banderas'}}}
-      type="buy"
+      type="like"
       />
       <Footer />
     </div>
