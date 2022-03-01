@@ -11,6 +11,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
+import ExploreFilters from "../src/components/explore/ExploreFilters";
 
 
 export default function Index() {
@@ -98,6 +99,33 @@ export default function Index() {
     }
   ]
 
+  const filtersObj = {
+    "sort": [
+      {
+        "label": "Name (Ascending)",
+        "value": 1
+      },
+      {
+        "label": "Name (Descending)",
+        "value": 2
+      }
+    ],
+    "price": [
+      {
+        "label": "0.3 - 0.5 ETH",
+        "value": 3
+      },
+      {
+        "label": "0.5 - 2 ETH",
+        "value": 4
+      },
+      {
+        "label": "2- 3 ETH",
+        "value": 5
+      }
+    ]
+  }
+
 
   return (
     <div>
@@ -109,6 +137,7 @@ export default function Index() {
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
       <Auctions cards={nftCards} />
+      <ExploreFilters filters={filtersObj} />
       <Footer />
     </div>
   );
