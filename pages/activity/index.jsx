@@ -32,7 +32,7 @@ export default function Activity() {
     return(
         <div>
             <Header/>
-            <Hero text={'Activity'}/>
+            {/* <Hero text={'Activity'}/> */}
             <ActivityFilters filters={filtersObj}/>
             <ActivityList items={activityCards}/>
             <Footer/>
