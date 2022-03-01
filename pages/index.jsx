@@ -98,62 +98,6 @@ export default function Index() {
     }
   ]
 
-  const userObj = {
-    name: 'fredrika_a',
-    info: 'Lorem Ipsum',
-    avatar: '/images/avatar.png',
-    verified: true
-  }
-
-
-  const itemsArr = [
-    {
-      user:{
-        avatar:{url:'/images/avatar.png'}, 
-        verified: true, 
-        name: 'fredrika_a' 
-      },
-      created_at:'2022-02-28T08:29:19.930Z',
-      nft:{
-        name:'Dog Bone',
-        owner:{
-          username:'Antonio Banderas'
-        }
-      },
-      type:"like"
-    },
-    {
-      user:{
-        avatar:{url:'/images/avatar.png'}, 
-        verified: true, 
-        name: 'fredrika_a' 
-      },
-      created_at:'2022-02-28T08:29:19.930Z',
-      nft:{
-        name:'Dog Bone',
-        owner:{
-          username:'Antonio Banderas'
-        }
-      },
-      type:"like"
-    },
-    {
-      user:{
-        avatar:{url:'/images/avatar.png'}, 
-        verified: true, 
-        name: 'fredrika_a' 
-      },
-      created_at:'2022-02-28T08:29:19.930Z',
-      nft:{
-        name:'Dog Bone',
-        owner:{
-          username:'Antonio Banderas'
-        }
-      },
-      type:"like"
-    }
-  ]
-
 
   return (
     <div>
