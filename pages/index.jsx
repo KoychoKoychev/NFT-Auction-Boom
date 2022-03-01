@@ -108,19 +108,6 @@ export default function Index() {
     verified: true
   }
 
-  const filtersObj = {
-    sort: [
-      { label: "Name (Ascending)", value: 1 },
-      { label: "Name (Descending)", value: 2 },
-    ],
-    type: [
-      { label: "Liked", value: 3 },
-      {
-        label: "Bought",
-        value: 4,
-      },
-    ],
-  }
 
   const itemsArr = [
     {
@@ -181,7 +168,6 @@ export default function Index() {
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
       <Auctions cards={nftCards} />
-      <ActivityList items={itemsArr}/>
       <Footer />
     </div>
   );

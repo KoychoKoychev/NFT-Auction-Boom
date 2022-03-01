@@ -3,7 +3,13 @@
 
 .activity-filters{
     position: relative;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-top: -160px;
+    margin-bottom: 40px
 }
+
 
 .activity-filters .profile-select-sort, .activity-filters .select_price{
     width: 220px;
@@ -14,9 +20,10 @@
     font-family: "Montserrat",sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12.5px;
     line-height: 17px;
     padding-left: 20px;
+
 }
 
 
