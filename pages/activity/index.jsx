@@ -5,14 +5,14 @@ import ActivityFilters from "../../src/components/activity/ActivityFilters";
 import ActivityList from "../../src/components/activity/ActivityList";
 import Hero from "../../src/components/hero/Hero";
 
-import dataActivity from "../../data/activity.json"
+// import dataActivity from "../../data/activity.json"
 
 export default function Activity() {
 
-    const [activityCards, setActivityCards] = useState([]);
-    useEffect(() => {
-        setActivityCards(dataActivity);
-    }, []);
+    // const [activityCards, setActivityCards] = useState([]);
+    // useEffect(() => {
+    //     setActivityCards(dataActivity);
+    // }, []);
 
 
     const filtersObj = {
@@ -32,9 +32,9 @@ export default function Activity() {
     return(
         <div>
             <Header/>
-            {/* <Hero text={'Activity'}/> */}
+            <Hero text={'Activity'}/>
             <ActivityFilters filters={filtersObj}/>
-            <ActivityList items={activityCards}/>
+            {/* <ActivityList items={activityCards}/> */}
             <Footer/>
         </div>
     )
