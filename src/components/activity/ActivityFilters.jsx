@@ -6,7 +6,7 @@ import { Search } from "@mui/icons-material";
 export default function ActivityFilters({filters}) {
     return(
         <div className={classNames(styles["activity-filters"])}>
-            <Stack direction="row" spacing={2}>
+            {/* <Stack direction="row" spacing={2}>
                 <FormControl >
                     <InputLabel id="select_sort_label">Sort by</InputLabel>
                     <Select
@@ -48,7 +48,7 @@ export default function ActivityFilters({filters}) {
                     }}
                     variant="standard"
                 />
-            </Stack>
+            </Stack> */}
         </div>
     )
 }
