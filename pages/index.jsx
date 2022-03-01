@@ -13,6 +13,7 @@ import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
 import ActivityFilters from "../src/components/activity/ActivityFilters";
 import ActivityListItem from "../src/components/activity/ActivityListItem";
+import ActivityList from "../src/components/activity/ActivityList";
 
 
 export default function Index() {
@@ -121,6 +122,53 @@ export default function Index() {
     ],
   }
 
+  const itemsArr = [
+    {
+      user:{
+        avatar:{url:'/images/avatar.png'}, 
+        verified: true, 
+        name: 'fredrika_a' 
+      },
+      created_at:'2022-02-28T08:29:19.930Z',
+      nft:{
+        name:'Dog Bone',
+        owner:{
+          username:'Antonio Banderas'
+        }
+      },
+      type:"like"
+    },
+    {
+      user:{
+        avatar:{url:'/images/avatar.png'}, 
+        verified: true, 
+        name: 'fredrika_a' 
+      },
+      created_at:'2022-02-28T08:29:19.930Z',
+      nft:{
+        name:'Dog Bone',
+        owner:{
+          username:'Antonio Banderas'
+        }
+      },
+      type:"like"
+    },
+    {
+      user:{
+        avatar:{url:'/images/avatar.png'}, 
+        verified: true, 
+        name: 'fredrika_a' 
+      },
+      created_at:'2022-02-28T08:29:19.930Z',
+      nft:{
+        name:'Dog Bone',
+        owner:{
+          username:'Antonio Banderas'
+        }
+      },
+      type:"like"
+    }
+  ]
 
 
   return (
@@ -133,12 +181,7 @@ export default function Index() {
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
       <Auctions cards={nftCards} />
-      <ActivityListItem 
-      user={{avatar:{url:'/images/avatar.png'}, verified: true, name: 'fredrika_a' }}
-      created_at='2022-02-28T08:29:19.930Z'
-      nft={{name:'Dog Bone',owner:{username:'Antonio Banderas'}}}
-      type="like"
-      />
+      <ActivityList items={itemsArr}/>
       <Footer />
     </div>
   );
