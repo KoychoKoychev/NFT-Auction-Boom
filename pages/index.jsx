@@ -11,9 +11,6 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
-import ActivityFilters from "../src/components/activity/ActivityFilters";
-import ActivityListItem from "../src/components/activity/ActivityListItem";
-import ActivityList from "../src/components/activity/ActivityList";
 
 
 export default function Index() {
@@ -164,7 +161,7 @@ export default function Index() {
       <Featured items={featuredCards} />
       <Trending cards={trendingCards} />
       <TopCollectors collectors={userCards} />
-      <How title="How it works"
+      <How title="HOW IT WORKS"
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
       <Auctions cards={nftCards} />
