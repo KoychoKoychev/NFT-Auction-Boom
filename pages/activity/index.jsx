@@ -1,6 +1,6 @@
 // import { useState, useEffect } from "react";
-// import Footer from "../../src/components/footer/Footer";
-// import Header from "../../src/components/header/Header";
+import Footer from "../../src/components/footer/Footer";
+import Header from "../../src/components/header/Header";
 // import ActivityFilters from "../../src/components/activity/ActivityFilters";
 // import ActivityList from "../../src/components/activity/ActivityList";
 // import Hero from "../../src/components/hero/Hero";
@@ -31,11 +31,11 @@ export default function Activity() {
 
     return(
         <div>
-            {/* <Header/>
-            <Hero text={'Activity'}/>
-            <ActivityFilters filters={filtersObj}/>
-            <ActivityList items={activityCards}/>
-            <Footer/> */}
+            <Header/>
+            {/* <Hero text={'Activity'}/> */}
+            {/* <ActivityFilters filters={filtersObj}/> */}
+            {/* <ActivityList items={activityCards}/> */}
+            <Footer/>
         </div>
     )
 }
