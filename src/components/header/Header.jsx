@@ -26,7 +26,7 @@ export default function Header(props) {
                     <ul className={classNames(styles.navMenu)}>
                         <li className={classNames(styles.listItem)}><a className={classNames(styles.link)} href="/">Home</a></li>
                         <li className={classNames(styles.listItem)}><a className={classNames(styles.link)} href="/activity">Activity</a></li>
-                        <li className={classNames(styles.listItem, styles.listButton)}><Button variant="contained" href="/">EXPLORE</Button></li>
+                        <li className={classNames(styles.listItem, styles.listButton)}><Button variant="contained" href="/explore">EXPLORE</Button></li>
                     </ul>
                 </Grid>
             </Grid>
