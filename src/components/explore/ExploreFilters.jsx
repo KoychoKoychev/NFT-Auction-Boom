@@ -7,7 +7,7 @@ export default function ExploreFilters({ filters }) {
 
     return (
         <div className={classNames(styles['explore-filters'])}>
-            {/* <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={2}>
                 <FormControl >
                     <InputLabel id="select_sort_label">Sort by</InputLabel>
                     <Select
@@ -45,7 +45,7 @@ export default function ExploreFilters({ filters }) {
                     }}
                     variant="standard"
                 />
-            </Stack> */}
+            </Stack>
         </div>
     )
 }
