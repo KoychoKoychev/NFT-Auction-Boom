@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Container, Grid, MenuItem, Select } from "@mui/material";
 import Card from "../card/Card"
 
-export default function Trending({ cards = [] }) {
+export default function Trending({ cards = [], filters }) {
     return (
         <div className={classNames(styles.wrapper)}>
             <Container maxWidth="xl">
@@ -12,20 +12,27 @@ export default function Trending({ cards = [] }) {
                     <Select
                         className={classNames(styles.selectMenu)}
                         id="select-trending-period"
-                        defaultValue="This Week"
+                        defaultValue={1}
                     >
-                        <MenuItem value="Today">Today</MenuItem>
-                        <MenuItem value="This Week">This Week</MenuItem>
-                        <MenuItem value="This Month">This Month</MenuItem>
-                        <MenuItem value="This Year">This Year</MenuItem>
-                        <MenuItem value="All Time">All Time</MenuItem>
+                        {filters.map((el,index)=>{
+                            return <MenuItem key={index} value={el.value}>{el.label}</MenuItem>
+                        })}
                     </Select>
                 </div>
                 <Grid container spacing={2}>
                     {cards.slice(0, 4).map((card,index) => {
                         return (
                             <Grid item key={index}>
-                                <Card name={card.name} likes={card.likes} user={{avatarUrl:card.owner.avatar.url, verified:card.owner.verified}} mediaUrl={card.source.url} price={card.price} currency={card.currency} />
+                                <Card 
+                                name={card.name} 
+                                likes={card.likes} 
+                                user={{avatarUrl:card.owner.avatar.url, 
+                                verified:card.owner.verified}} 
+                                mediaUrl={card.source.url} 
+                                price={card.price} 
+                                currency={card.currency}
+                                timeLeft ={new Date(card.auction_end) - Date.now()}
+                                />
                             </Grid>
                         )
                     })}

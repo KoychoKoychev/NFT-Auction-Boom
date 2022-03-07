@@ -15,16 +15,19 @@ import { useState, useEffect } from "react";
 export default function Index() {
 
   const [featuredCards, setFeaturedCards] = useState([]);
-  useEffect(async() => {
+  useEffect(async () => {
     const result = await fetch(process.env.apiUrl + '/featured');
-    const featuredData = await result.json()
-    console.log(featuredData);
+    const featuredData = await result.json();
     setFeaturedCards(featuredData.nfts);
   }, []);
 
-  const [trendingCards, setTrendingCards] = useState([]);
-  useEffect(() => {
-    setTrendingCards(dataTrending);
+  const [trendingItems, setTrendingItems] = useState([]);
+  const [trendingFilters, setTrendingFilters] = useState([]);
+  useEffect(async () => {
+    const result = await fetch(process.env.apiUrl + '/trending');
+    const featuredData = await result.json();
+    setTrendingItems(featuredData.nfts);
+    setTrendingFilters(featuredData.filters.sort);
   }, []);
 
   const [userCards, setUserCards] = useState([]);
@@ -104,7 +107,7 @@ export default function Index() {
     <div>
       <Header />
       <Featured items={featuredCards} />
-      <Trending cards={trendingCards} />
+      <Trending cards={trendingItems} filters={trendingFilters} />
       <TopCollectors collectors={userCards} />
       <How title="HOW IT WORKS"
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."

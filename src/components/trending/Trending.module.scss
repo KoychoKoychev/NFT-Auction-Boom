@@ -35,6 +35,10 @@
     line-height: 1.075rem;
     margin-top: 1.5%;
     margin-right: 3%;
+
+    *{
+        min-height: unset !important;
+    }
 }
 
 .trendingHead .selectMenu svg{
