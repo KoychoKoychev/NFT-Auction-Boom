@@ -6,19 +6,20 @@ import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
 
-import dataFeatured from "../data/featured.json"
 import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
-import ExploreFilters from "../src/components/explore/ExploreFilters";
 
 
 export default function Index() {
 
   const [featuredCards, setFeaturedCards] = useState([]);
-  useEffect(() => {
-    setFeaturedCards(dataFeatured);
+  useEffect(async() => {
+    const result = await fetch(process.env.apiUrl + '/featured');
+    const featuredData = await result.json()
+    console.log(featuredData);
+    setFeaturedCards(featuredData.nfts);
   }, []);
 
   const [trendingCards, setTrendingCards] = useState([]);
@@ -98,9 +99,6 @@ export default function Index() {
       "date": "2022-02-12T01:29:19.930Z"
     }
   ]
-
-
-
 
   return (
     <div>
