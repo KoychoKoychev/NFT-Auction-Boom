@@ -58,11 +58,12 @@ export default function Explore() {
                         <ExploreFilters filters={filtersObj} />
                     </Grid>
                 </Grid>
-                <Grid container spacing={2} justifyContent={'space-between'} className={classNames(styles.cards)}>
+                <Grid container spacing={2} justifyContent='space-between' alignItems="stretch" className={classNames(styles.cards)}>
                     {exploreCards.map((el)=>{
                         return(
                             <Grid item key={el.id}>
                                 <Card 
+                                className={classNames(styles.card)}
                                 name={el.name} 
                                 likes={el.likes} 
                                 mediaUrl={el.source.url}
