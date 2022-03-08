@@ -8,43 +8,18 @@ import Header from "../../src/components/header/Header";
 import styles from "./ExplorePage.module.scss";
 import classNames from "classnames";
 
-import dataExplore from "../../data/nfts.json"
 import Card from "../../src/components/card/Card";
 
 export default function Explore() {
 
-    const [exploreCards, setExploreCards] = useState([]);
-    useEffect(() => {
-        setExploreCards(dataExplore);
+    const [nfts, setNfts] = useState([]);
+    const [nftFilters, setNftFilters] = useState(null);
+    useEffect(async () => {
+        const result = await fetch(process.env.apiUrl + '/explore')
+        const exploreData = await result.json();
+        setNfts(exploreData.nfts);
+        setNftFilters(exploreData.filters);
     }, []);
-
-
-    const filtersObj = {
-        "sort": [
-            {
-                "label": "Name (Ascending)",
-                "value": 1
-            },
-            {
-                "label": "Name (Descending)",
-                "value": 2
-            }
-        ],
-        "price": [
-            {
-                "label": "0.3 - 0.5 ETH",
-                "value": 3
-            },
-            {
-                "label": "0.5 - 2 ETH",
-                "value": 4
-            },
-            {
-                "label": "2- 3 ETH",
-                "value": 5
-            }
-        ]
-    }
 
     return (
         <div>
@@ -55,11 +30,17 @@ export default function Explore() {
                         <ExploreTitle text={'Explore'} />
                     </Grid>
                     <Grid item>
-                        <ExploreFilters filters={filtersObj} />
+                        {nftFilters!=null?
+                        <ExploreFilters filters={nftFilters} />
+                        :null}
                     </Grid>
                 </Grid>
-                <Grid container spacing={2} justifyContent='space-between' alignItems="stretch" className={classNames(styles.cards)}>
-                    {exploreCards.map((el)=>{
+                <Grid 
+                container spacing={2} 
+                justifyContent='space-between' 
+                alignItems="stretch" 
+                className={classNames(styles.cards)}>
+                    {nfts.map((el)=>{
                         return(
                             <Grid item key={el.id}>
                                 <Card 

@@ -5,6 +5,8 @@ import Search from "@mui/icons-material/Search";
 
 export default function ExploreFilters({ filters }) {
 
+    console.log(filters);
+
     return (
         <div className={classNames(styles['explore-filters'])}>
             <Stack direction="row" spacing={2}>
@@ -14,7 +16,7 @@ export default function ExploreFilters({ filters }) {
                         className={classNames(styles["explore-select-sort"])}
                         labelId="select_sort_label"
                         id="select_sort"
-                        label="Sort by_"
+                        label="Sort by__"
                     >
                         {filters.sort.map((el, index) => {
                             return (
@@ -29,7 +31,7 @@ export default function ExploreFilters({ filters }) {
                         className={classNames(styles.select_price)}
                         labelId="select_price_label"
                         id="select_price"
-                        label="Price range_"
+                        label="Price range__"
                     >
                         {filters.price.map((el, index) => {
                             return (
