@@ -41,13 +41,13 @@ export default function ActivityFilters({filters}) {
                         })}
                     </Select>
                 </FormControl>
-                {/* <TextField
+                <TextField
                     className={classNames(styles.text_input)}
                     InputProps={{
                         startAdornment: <InputAdornment position="start"><Search color="primary"/></InputAdornment>
                     }}
                     variant="standard"
-                /> */}
+                />
             </Stack>
         </div>
     )
