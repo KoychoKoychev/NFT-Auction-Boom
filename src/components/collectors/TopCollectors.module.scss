@@ -27,7 +27,7 @@
 .topColHead .selectMenu{
     background-color: colors.$background_paper;
     height: 50px;
-    width: 220px;
+    width: 270px;
     border-radius: 30px;
     color: colors.$text_secondary;
     font-family: "Montserrat",sans-serif;
@@ -36,6 +36,10 @@
     line-height: 1.075rem;
     margin-top: 1.5%;
     margin-right: 3%;
+
+    *{
+        min-height: unset !important;
+    }
 }
 
 .topColHead .selectMenu svg{

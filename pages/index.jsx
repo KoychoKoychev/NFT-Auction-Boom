@@ -6,7 +6,6 @@ import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
 
-import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
@@ -30,9 +29,13 @@ export default function Index() {
     setTrendingFilters(featuredData.filters.sort);
   }, []);
 
-  const [userCards, setUserCards] = useState([]);
-  useEffect(() => {
-    setUserCards(dataUsers);
+  const [collectors, setCollectors] = useState([]);
+  const [collectorFilters, setcollectorFilters] = useState([]);
+  useEffect(async () => {
+    const result = await fetch(process.env.apiUrl + '/top-collectors');
+    const userData = await result.json();
+    setCollectors(userData.users.sort((a,b)=>b.nftCount - a.nftCount));
+    setcollectorFilters(userData.filters.sort);
   }, []);
 
   const [nftCards, setNftCards] = useState([]);
@@ -108,7 +111,7 @@ export default function Index() {
       <Header />
       <Featured items={featuredCards} />
       <Trending cards={trendingItems} filters={trendingFilters} />
-      <TopCollectors collectors={userCards} />
+      <TopCollectors collectors={collectors} filters={collectorFilters}/>
       <How title="HOW IT WORKS"
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
