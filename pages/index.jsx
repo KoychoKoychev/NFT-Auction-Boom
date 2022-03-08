@@ -38,9 +38,13 @@ export default function Index() {
     setcollectorFilters(userData.filters.sort);
   }, []);
 
-  const [nftCards, setNftCards] = useState([]);
-  useEffect(() => {
-    setNftCards(dataNfts);
+  const [auctions, setAuctions] = useState([]);
+  const [auctionFilters, setAuctionFilters ] = useState([]);
+  useEffect(async () => {
+    const result = await fetch(process.env.apiUrl + '/live-auctions');
+    const auctionData = await result.json();
+    setAuctions(auctionData.nfts);
+    setAuctionFilters(auctionData.filters.price)
   }, []);
 
   const howItemsArr = [
@@ -58,54 +62,6 @@ export default function Index() {
     }
   ]
 
-  const bidsArr = [
-    {
-      "user": {
-        "avatar": "/images/avatar.png",
-        "name": "Cupcat NFT",
-        "verified": true
-      },
-      "amount": 1,
-      "date": "2022-01-22T08:29:19.930Z"
-    },
-    {
-      "user": {
-        "avatar": "/images/avatar.png",
-        "name": "Cupcat NFT",
-        "verified": false
-      },
-      "amount": 3,
-      "date": "2022-02-12T01:29:19.930Z"
-    },
-    {
-      "user": {
-        "avatar": "/images/avatar.png",
-        "name": "Cupcat NFT",
-        "verified": false
-      },
-      "amount": 3,
-      "date": "2022-02-12T01:29:19.930Z"
-    },
-    {
-      "user": {
-        "avatar": "/images/avatar.png",
-        "name": "Cupcat NFT",
-        "verified": false
-      },
-      "amount": 3,
-      "date": "2022-02-12T01:29:19.930Z"
-    },
-    {
-      "user": {
-        "avatar": "/images/avatar.png",
-        "name": "Cupcat NFT",
-        "verified": false
-      },
-      "amount": 3,
-      "date": "2022-02-12T01:29:19.930Z"
-    }
-  ]
-
   return (
     <div>
       <Header />
@@ -115,7 +71,7 @@ export default function Index() {
       <How title="HOW IT WORKS"
         description="Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
         items={howItemsArr} />
-      <Auctions cards={nftCards} />
+      <Auctions cards={auctions} filters={auctionFilters} />
       <Footer />
     </div>
   );
