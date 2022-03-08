@@ -5,27 +5,26 @@ import Footer from "../../../src/components/footer/Footer";
 import Header from "../../../src/components/header/Header";
 import ProductContainer from "../../../src/components/product/ProductContainer";
 
-import dataNfts from "/data/nfts.json"
-
-
 export default function Product() {
 
     const router = useRouter();
-    const { id } = router.query
+    const { id } = router.query;
 
     const [product, setProduct ] = useState(null);
     
     useEffect(async() => {
-        const result = await fetch(process.env.apiUrl + '/nfts/' + id);
-        const productData = await result.json();
-        setProduct(productData);
-    },[])
+        if(id){
+            const result = await fetch(process.env.apiUrl + `/nfts/${id}`);
+            const productData = await result.json();
+            setProduct(productData);
+        }
+    },[id])
 
 
     return (
         <div>
             <Header />
-            {product?
+            {product!=null?
             <ProductContainer
                 name={product.name}
                 source={product.source}
