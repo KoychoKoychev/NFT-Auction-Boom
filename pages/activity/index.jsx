@@ -5,36 +5,25 @@ import ActivityFilters from "../../src/components/activity/ActivityFilters";
 import ActivityList from "../../src/components/activity/ActivityList";
 import Hero from "../../src/components/hero/Hero";
 
-import dataActivity from "../../data/activity.json"
-
 export default function Activity() {
 
-    const [activityCards, setActivityCards] = useState([]);
-    useEffect(() => {
-        setActivityCards(dataActivity);
+    const [activity, setActivity] = useState([]);
+    const [activityFilters, setActivityFilters] = useState(null);
+    useEffect(async () => {
+        const result = await fetch(process.env.apiUrl + '/activities')
+        const activityData = await result.json();
+        setActivity(activityData.activities);
+        setActivityFilters(activityData.filters);
     }, []);
-
-
-    const filtersObj = {
-        sort: [
-          { label: "Name (Ascending)", value: 1 },
-          { label: "Name (Descending)", value: 2 },
-        ],
-        type: [
-          { label: "Liked", value: 3 },
-          {
-            label: "Bought",
-            value: 4,
-          },
-        ],
-      }
 
     return(
         <div>
             <Header/>
             <Hero text={'Activity'}/>
-            <ActivityFilters filters={filtersObj}/>
-            <ActivityList items={activityCards}/>
+            {activityFilters!=null?
+            <ActivityFilters filters={activityFilters}/>
+            :null}
+            <ActivityList items={activity}/>
             <Footer/>
         </div>
     )
