@@ -6,8 +6,6 @@ import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
 
-import dataUsers from "../data/users.json"
-import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react";
 
 
