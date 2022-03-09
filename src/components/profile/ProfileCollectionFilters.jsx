@@ -7,7 +7,7 @@ export default function ProfileCollectionFilters({ filters }) {
     return (
         <div className={classNames(styles["profile-collection-filters"])}>
             <Stack direction="row" spacing={2}>
-                <FormControl >
+                {/* <FormControl >
                     <InputLabel id="select_sort_label">Sort by</InputLabel>
                     <Select
                         className={classNames(styles["profile-select-sort"])}
@@ -37,7 +37,7 @@ export default function ProfileCollectionFilters({ filters }) {
                         })}
                     </Select>
                 </FormControl>
-                {/* <TextField
+                <TextField
                     className={classNames(styles.text_input)}
                     InputProps={{
                         startAdornment: <InputAdornment position="start"><Search color="primary"/></InputAdornment>
