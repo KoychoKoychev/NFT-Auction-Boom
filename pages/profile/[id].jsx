@@ -7,11 +7,8 @@ import ProfileCollection from "../../src/components/profile/ProfileCollection";
 import ProfileHero from "../../src/components/profile/ProfileHero";
 import ProfileUser from "../../src/components/profile/ProfileUser";
 
-import dataProfile from "../../data/profile.json"
 import { useRouter } from "next/dist/client/router";
 import { useEffect, useState } from "react";
-
-
 
 export default function Profile() {
 
@@ -42,10 +39,10 @@ export default function Profile() {
                     info={profile.info} 
                     avatar={profile.avatar.url} 
                     verified={profile.verified} />
-                    {/* <ProfileCollection 
+                    <ProfileCollection 
                     user={{ name: profile.username, info: profile.info, avatar: profile.avatar.url, verified: profile.verified }}
                     filters={profileFilters}
-                    items={profile.nfts} /> */}
+                    items={profile.nfts} />
                 </React.Fragment>
                 : null
             }
