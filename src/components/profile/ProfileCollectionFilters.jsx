@@ -40,7 +40,7 @@ export default function ProfileCollectionFilters({ filters }) {
                 <TextField
                     className={classNames(styles.text_input)}
                     InputProps={{
-                        startAdornment: <InputAdornment position="start"><Search color="primary" /></InputAdornment>
+                        // startAdornment: <InputAdornment position="start"><Search color="primary"/></InputAdornment>
                     }}
                     variant="standard"
                 />

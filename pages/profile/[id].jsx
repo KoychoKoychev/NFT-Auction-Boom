@@ -18,48 +18,35 @@ export default function Profile() {
     const router = useRouter();
     const { id } = router.query
 
-    const [currProfile, setCurrProfile] = useState({});
-    const [itemLoaded, setItemLoaded] = useState(false);
+    const [profile, setCurrProfile] = useState(null);
+    const [profileFilters, setProfileFilters] = useState(null);
 
 
-    useEffect(() => {
-        setCurrProfile(dataProfile);
-    }, [id]);
-
-    useEffect(() => {
-        if (currProfile != {} && id) {
-            setItemLoaded(true);
+    useEffect(async() => {
+        if(id){
+            const result = await fetch(process.env.apiUrl + `/users/${id}`);
+            const profileData = await result.json();
+            setCurrProfile(profileData.user);
+            setProfileFilters(profileData.filters)
         }
-    }, [id]);
-
-
-    const filterObj = {
-        sort: [
-          { label: "Name (Ascending)", value: 1 },
-          { label: "Name (Descending)", value: 2 },
-        ],
-        price: [
-          { label: "0.3 - 0.5 ETH", value: 3 },
-          { label: "0.5 - 2 ETH", value: 4, },
-          { label: "2- 3 ETH", value: 5, },
-        ],
-      }
+    },[id])
 
     return (
         <div className={classNames(styles.profile_page)}>
             <Header />
-            {itemLoaded
+            {profile!=null && profileFilters!=null
                 ? <React.Fragment>
-                    <ProfileHero image={currProfile.avatar.backgroundUrl} />
+                    {console.log(profileFilters)}
+                    <ProfileHero image={profile.avatar.backgroundUrl} />
                     <ProfileUser 
-                    name={currProfile.username} 
-                    info={currProfile.info} 
-                    avatar={currProfile.avatar.url} 
-                    verified={currProfile.verified} />
+                    name={profile.username} 
+                    info={profile.info} 
+                    avatar={profile.avatar.url} 
+                    verified={profile.verified} />
                     <ProfileCollection 
-                    user={{ name: currProfile.username, info: currProfile.info, avatar: currProfile.avatar.url, verified: currProfile.verified }}
-                    filters={filterObj}
-                    items={currProfile.nfts} />
+                    user={{ name: profile.username, info: profile.info, avatar: profile.avatar.url, verified: profile.verified }}
+                    filters={profileFilters}
+                    items={profile.nfts} />
                 </React.Fragment>
                 : null
             }
