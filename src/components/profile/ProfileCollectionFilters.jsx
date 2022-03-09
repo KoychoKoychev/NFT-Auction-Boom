@@ -6,8 +6,8 @@ import { Search } from "@mui/icons-material";
 export default function ProfileCollectionFilters({ filters }) {
     return (
         <div className={classNames(styles["profile-collection-filters"])}>
-            <Stack direction="row" spacing={2}>
-                {/* <FormControl >
+            {/* <Stack direction="row" spacing={2}>
+                <FormControl >
                     <InputLabel id="select_sort_label">Sort by</InputLabel>
                     <Select
                         className={classNames(styles["profile-select-sort"])}
@@ -43,8 +43,8 @@ export default function ProfileCollectionFilters({ filters }) {
                         startAdornment: <InputAdornment position="start"><Search color="primary"/></InputAdornment>
                     }}
                     variant="standard"
-                /> */}
-            </Stack>
+                />
+            </Stack> */}
         </div >
     )
 }
