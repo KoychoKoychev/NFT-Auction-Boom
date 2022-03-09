@@ -36,17 +36,16 @@ export default function Profile() {
             <Header />
             {profile!=null && profileFilters!=null
                 ? <React.Fragment>
-                    {console.log(profileFilters)}
                     <ProfileHero image={profile.avatar.backgroundUrl} />
                     <ProfileUser 
                     name={profile.username} 
                     info={profile.info} 
                     avatar={profile.avatar.url} 
                     verified={profile.verified} />
-                    <ProfileCollection 
+                    {/* <ProfileCollection 
                     user={{ name: profile.username, info: profile.info, avatar: profile.avatar.url, verified: profile.verified }}
                     filters={profileFilters}
-                    items={profile.nfts} />
+                    items={profile.nfts} /> */}
                 </React.Fragment>
                 : null
             }
