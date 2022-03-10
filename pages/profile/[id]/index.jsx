@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styles from "./profilePage.module.scss";
 import classNames from "classnames";
-import Footer from "../../src/components/footer/Footer";
-import Header from "../../src/components/header/Header";
-import ProfileCollection from "../../src/components/profile/ProfileCollection";
-import ProfileHero from "../../src/components/profile/ProfileHero";
-import ProfileUser from "../../src/components/profile/ProfileUser";
+import Footer from "../../../src/components/footer/Footer";
+import Header from "../../../src/components/header/Header";
+import ProfileCollection from "../../../src/components/profile/ProfileCollection";
+import ProfileHero from "../../../src/components/profile/ProfileHero";
+import ProfileUser from "../../../src/components/profile/ProfileUser";
 
 import { useRouter } from "next/dist/client/router";
 import { useEffect, useState } from "react";
