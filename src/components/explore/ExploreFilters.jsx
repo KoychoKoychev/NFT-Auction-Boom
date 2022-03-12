@@ -3,9 +3,7 @@ import classNames from "classnames";
 import { FormControl, InputAdornment, InputLabel, MenuItem, Select, Stack, TextField } from "@mui/material";
 import Search from "@mui/icons-material/Search";
 
-export default function ExploreFilters({ filters }) {
-
-    console.log(filters);
+export default function ExploreFilters({ filters,sortValue, priceValue, onSortChange, onPriceChange}) {
 
     return (
         <div className={classNames(styles['explore-filters'])}>
@@ -17,6 +15,8 @@ export default function ExploreFilters({ filters }) {
                         labelId="select_sort_label"
                         id="select_sort"
                         label="Sort by__"
+                        onChange={onSortChange}
+                        value={sortValue}
                     >
                         {filters.sort.map((el, index) => {
                             return (
@@ -32,6 +32,8 @@ export default function ExploreFilters({ filters }) {
                         labelId="select_price_label"
                         id="select_price"
                         label="Price range__"
+                        onChange={onPriceChange}
+                        value={priceValue}
                     >
                         {filters.price.map((el, index) => {
                             return (

@@ -14,12 +14,64 @@ export default function Explore() {
 
     const [nfts, setNfts] = useState([]);
     const [nftFilters, setNftFilters] = useState(null);
+    const [sortValue, setSortValue] = useState('');
+    const [priceValue, setPriceValue] = useState('');
+
+    const filterFunctions = {
+        1: function (a, b) {
+            return new Date(a.auction_end) - new Date(b.auction_end);
+        },
+        2: function (a, b) {
+            return new Date(b.auction_end) - new Date(a.auction_end);
+        },
+        3: function (a, b) {
+            return a.name.localeCompare(b.name);
+        },
+        4: function (a, b) {
+            return b.name.localeCompare(a.name);
+        },
+        5: function (a, b) {
+            return a.price - b.price;
+        },
+        6: function (a, b) {
+            return b.price - a.price;
+        },
+        7: function (el) {
+            return el.price<1;
+        },
+        8: function (el) {
+            return el.price>=1 && el.price<4;
+        },
+        9: function (el) {
+            return el.price>=4;
+        },
+    }
+
     useEffect(async () => {
         const result = await fetch(process.env.apiUrl + '/explore')
         const exploreData = await result.json();
-        setNfts(exploreData.nfts);
         setNftFilters(exploreData.filters);
-    }, []);
+        if (sortValue && priceValue) {
+            setNfts(exploreData.nfts.sort(filterFunctions[sortValue]).filter(filterFunctions[priceValue]));
+        }else if(sortValue){
+            setNfts(exploreData.nfts.sort(filterFunctions[sortValue]));
+        }else if(priceValue){
+            setNfts(exploreData.nfts.filter(filterFunctions[priceValue]));
+        }else{
+            setNfts(exploreData.nfts);
+        }
+        console.log(sortValue);
+        console.log(filterFunctions[sortValue]);
+    }, [sortValue, priceValue]);
+
+
+    function onSortChange(ev) {
+        setSortValue(ev.target.value);
+    }
+    function onPriceChange(ev) {
+        setPriceValue(ev.target.value);
+    }
+
 
     return (
         <div>
@@ -30,28 +82,33 @@ export default function Explore() {
                         <ExploreTitle text={'Explore'} />
                     </Grid>
                     <Grid item>
-                        {nftFilters!=null?
-                        <ExploreFilters filters={nftFilters} />
-                        :null}
+                        {nftFilters != null ?
+                            <ExploreFilters
+                                filters={nftFilters}
+                                sortValue={sortValue}
+                                priceValue={priceValue}
+                                onSortChange={onSortChange}
+                                onPriceChange={onPriceChange} />
+                            : null}
                     </Grid>
                 </Grid>
-                <Grid 
-                container spacing={2} 
-                justifyContent='space-between' 
-                alignItems="stretch" 
-                className={classNames(styles.cards)}>
-                    {nfts.map((el)=>{
-                        return(
-                            <Grid item key={el.id}>
-                                <Card 
-                                className={classNames(styles.card)}
-                                name={el.name} 
-                                likes={el.likes} 
-                                mediaUrl={el.source.url}
-                                user={{'avatarUrl':el.owner.avatar.url, 'verified': el.owner.confirmed}}
-                                price={el.price}
-                                currency={el.currency}
-                                timeLeft ={new Date(el.auction_end) - Date.now()}
+                <Grid
+                    container spacing={2}
+                    justifyContent="flex-start"
+                    alignItems="stretch"
+                    className={classNames(styles.cards)}>
+                    {nfts.map((el) => {
+                        return (
+                            <Grid item key={el.id} xs={3}>
+                                <Card
+                                    className={classNames(styles.card)}
+                                    name={el.name}
+                                    likes={el.likes}
+                                    mediaUrl={el.source.url}
+                                    user={{ 'avatarUrl': el.owner.avatar.url, 'verified': el.owner.confirmed }}
+                                    price={el.price}
+                                    currency={el.currency}
+                                    timeLeft={new Date(el.auction_end) - Date.now()}
                                 />
                             </Grid>
                         )
