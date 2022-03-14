@@ -48,6 +48,19 @@ export default function Explore() {
     }
 
     useEffect(async () => {
+        if(nftFilters){
+            const params = new URLSearchParams();
+            if(nftFilters.sort) {
+                params.append('sort', nftFilters.sort);
+            }
+            if(nftFilters.price) {
+                params.append('price', nftFilters.price);
+            }
+            const response = await fetch(
+                `${process.env.apiUrl}/explore?${params.toString()}`
+            )
+        }
+
         const result = await fetch(process.env.apiUrl + '/explore')
         const exploreData = await result.json();
         setNftFilters(exploreData.filters);
@@ -60,8 +73,6 @@ export default function Explore() {
         }else{
             setNfts(exploreData.nfts);
         }
-        console.log(sortValue);
-        console.log(filterFunctions[sortValue]);
     }, [sortValue, priceValue]);
 
 
