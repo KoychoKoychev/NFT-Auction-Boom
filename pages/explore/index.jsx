@@ -12,10 +12,12 @@ import Card from "../../src/components/card/Card";
 
 export default function Explore() {
 
+    const [allNfts, getAllNfts] = useState([]);
     const [nfts, setNfts] = useState([]);
     const [nftFilters, setNftFilters] = useState(null);
     const [sortValue, setSortValue] = useState('');
     const [priceValue, setPriceValue] = useState('');
+    const [searchStr, setSearchString] = useState('');
 
     const filterFunctions = {
         1: function (a, b) {
@@ -37,7 +39,7 @@ export default function Explore() {
             return b.price - a.price;
         },
         7: function (el) {
-            return el.price<1;
+            return el.price < 1;
         },
         8: function (el) {
             return el.price>=1 && el.price<4;
@@ -47,42 +49,48 @@ export default function Explore() {
         },
     }
 
-    useEffect(async () => {
-        if(nftFilters){
-            const params = new URLSearchParams();
-            if(nftFilters.sort) {
-                params.append('sort', nftFilters.sort);
-            }
-            if(nftFilters.price) {
-                params.append('price', nftFilters.price);
-            }
-            const response = await fetch(
-                `${process.env.apiUrl}/explore?${params.toString()}`
-            )
-        }
+    function onSortChange(ev) {
+        setSortValue(ev.target.value);
+    }
+    async function onPriceChange(ev) {
+        setPriceValue(ev.target.value);
+    }
 
+    function inputChange(ev) {
+        const str = ev.target.value.trim().toLowerCase();
+        setSearchString(str);
+    }
+
+
+    useEffect(async () => {
         const result = await fetch(process.env.apiUrl + '/explore')
         const exploreData = await result.json();
         setNftFilters(exploreData.filters);
+        getAllNfts(exploreData.nfts);
         if (sortValue && priceValue) {
+            console.log('both');
             setNfts(exploreData.nfts.sort(filterFunctions[sortValue]).filter(filterFunctions[priceValue]));
+            getAllNfts(exploreData.nfts.sort(filterFunctions[sortValue]).filter(filterFunctions[priceValue]));
         }else if(sortValue){
+            console.log('sort');
             setNfts(exploreData.nfts.sort(filterFunctions[sortValue]));
+            getAllNfts(exploreData.nfts.sort(filterFunctions[sortValue]));
         }else if(priceValue){
+            console.log('price');
             setNfts(exploreData.nfts.filter(filterFunctions[priceValue]));
+            getAllNfts(exploreData.nfts.filter(filterFunctions[priceValue]));
         }else{
             setNfts(exploreData.nfts);
         }
     }, [sortValue, priceValue]);
 
-
-    function onSortChange(ev) {
-        setSortValue(ev.target.value);
-    }
-    function onPriceChange(ev) {
-        setPriceValue(ev.target.value);
-    }
-
+    useEffect(async () =>{
+        if(searchStr){
+            setNfts(allNfts.filter(el=>el.name.toLowerCase().includes(searchStr)))
+        }else{
+            setNfts(allNfts)
+        }
+    },[searchStr])
 
     return (
         <div>
@@ -99,7 +107,8 @@ export default function Explore() {
                                 sortValue={sortValue}
                                 priceValue={priceValue}
                                 onSortChange={onSortChange}
-                                onPriceChange={onPriceChange} />
+                                onPriceChange={onPriceChange}
+                                onTextFieldChange={inputChange} />
                             : null}
                     </Grid>
                 </Grid>

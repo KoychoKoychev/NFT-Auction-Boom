@@ -3,8 +3,8 @@ import classNames from "classnames";
 import { FormControl, InputAdornment, InputLabel, MenuItem, Select, Stack, TextField } from "@mui/material";
 import { Search } from "@mui/icons-material";
 
-export default function ActivityFilters({filters}) {
-    return(
+export default function ActivityFilters({ filters, sortValue, typeValue, onSortChange, onTypeChange, onTextFieldChange }) {
+    return (
         <div className={classNames(styles["activity-filters"])}>
             <Stack direction="row" spacing={2}>
                 <FormControl >
@@ -16,6 +16,8 @@ export default function ActivityFilters({filters}) {
                         label="Sort by_"
                         variant="outlined"
                         color="primary"
+                        value={sortValue}
+                        onChange={onSortChange}
                     >
                         {filters.sort.map((el, index) => {
                             return (
@@ -33,6 +35,8 @@ export default function ActivityFilters({filters}) {
                         label="Type_"
                         variant="outlined"
                         color="primary"
+                        value={typeValue}
+                        onChange={onTypeChange}
                     >
                         {filters.type.map((el, index) => {
                             return (
@@ -43,8 +47,9 @@ export default function ActivityFilters({filters}) {
                 </FormControl>
                 <TextField
                     className={classNames(styles.text_input)}
+                    onChange={onTextFieldChange}
                     InputProps={{
-                        startAdornment: <InputAdornment position="start"><Search color="primary"/></InputAdornment>
+                        startAdornment: <InputAdornment position="start"><Search color="primary" /></InputAdornment>
                     }}
                     variant="standard"
                 />

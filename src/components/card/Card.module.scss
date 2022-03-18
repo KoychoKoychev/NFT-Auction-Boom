@@ -51,6 +51,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: 2px;
+
+    a{
+        text-decoration: none;
+    }
 }
 
 .cardInfo .title{

@@ -24,8 +24,9 @@ export default function Auctions({ cards = [], filters=[] }) {
                         return (
                             <Grid item key={index}>
                                 <Card 
+                                id={card.id}
                                 name={card.name} 
-                                user={{avatarUrl: card.owner.avatar.url, verified: card.owner.confirmed}} 
+                                user={{avatarUrl: card.owner.avatar.url, verified: card.owner.confirmed, id:card.owner.id}} 
                                 mediaUrl={card.source.url} price={card.price} likes={card.likes} 
                                 currency={card.currency} 
                                 timeLeft ={new Date(card.auction_end) - Date.now()} />

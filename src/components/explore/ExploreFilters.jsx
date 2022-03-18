@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { FormControl, InputAdornment, InputLabel, MenuItem, Select, Stack, TextField } from "@mui/material";
 import Search from "@mui/icons-material/Search";
 
-export default function ExploreFilters({ filters,sortValue, priceValue, onSortChange, onPriceChange}) {
+export default function ExploreFilters({ filters,sortValue, priceValue, onSortChange, onPriceChange, onTextFieldChange}) {
 
     return (
         <div className={classNames(styles['explore-filters'])}>
@@ -44,6 +44,7 @@ export default function ExploreFilters({ filters,sortValue, priceValue, onSortCh
                 </FormControl>
                 <TextField
                     className={classNames(styles.text_input)}
+                    onChange={onTextFieldChange}
                     InputProps={{
                         startAdornment: <InputAdornment position="start"><Search color="primary" /></InputAdornment>
                     }}

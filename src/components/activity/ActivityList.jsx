@@ -11,7 +11,7 @@ export default function ActivityList({items}) {
                     return <ActivityListItem 
                     key={index}
                     user={el.user} 
-                    created_at={el.created_at} 
+                    created_at={el.published_at} 
                     nft={el.nft} 
                     type={el.type}
                     />

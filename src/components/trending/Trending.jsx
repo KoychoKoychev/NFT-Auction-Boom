@@ -24,10 +24,12 @@ export default function Trending({ cards = [], filters }) {
                         return (
                             <Grid item key={index}>
                                 <Card 
+                                id={card.id}
                                 name={card.name} 
                                 likes={card.likes} 
                                 user={{avatarUrl:card.owner.avatar.url, 
-                                verified:card.owner.verified}} 
+                                verified:card.owner.verified,
+                                id:card.owner.id}} 
                                 mediaUrl={card.source.url} 
                                 price={card.price} 
                                 currency={card.currency}
