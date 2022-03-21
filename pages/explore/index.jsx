@@ -68,15 +68,12 @@ export default function Explore() {
         setNftFilters(exploreData.filters);
         getAllNfts(exploreData.nfts);
         if (sortValue && priceValue) {
-            console.log('both');
             setNfts(exploreData.nfts.sort(filterFunctions[sortValue]).filter(filterFunctions[priceValue]));
             getAllNfts(exploreData.nfts.sort(filterFunctions[sortValue]).filter(filterFunctions[priceValue]));
         }else if(sortValue){
-            console.log('sort');
             setNfts(exploreData.nfts.sort(filterFunctions[sortValue]));
             getAllNfts(exploreData.nfts.sort(filterFunctions[sortValue]));
         }else if(priceValue){
-            console.log('price');
             setNfts(exploreData.nfts.filter(filterFunctions[priceValue]));
             getAllNfts(exploreData.nfts.filter(filterFunctions[priceValue]));
         }else{

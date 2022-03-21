@@ -8,8 +8,9 @@ export default function CollectorColumn({items=[]}) {
             {items.map((el,index)=>{
                 return(
                     <Collector
-                    key={el.id} 
-                    number={el.id} 
+                    key={el.id}
+                    link = {el.id} 
+                    number={el.num} 
                     name={el.username} 
                     nftsCount={el.nfts.length} 
                     avatar={el.avatar}

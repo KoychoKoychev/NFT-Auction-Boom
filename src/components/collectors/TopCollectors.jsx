@@ -8,7 +8,7 @@ export default function TopCollectors({collectors=[], filters=[]}) {
 
     const chunk = require('lodash.chunk');
 
-    collectors.map((el,index)=>el.id = index+1)
+    collectors.map((el,index)=>el.num = index+1)
 
     const splitArr = chunk(collectors.slice(0,12),3)
 

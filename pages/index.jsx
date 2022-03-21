@@ -18,6 +18,8 @@ export default function Index() {
     setFeaturedCards(featuredData.nfts);
   }, []);
 
+  
+
   const [trendingItems, setTrendingItems] = useState([]);
   const [trendingFilters, setTrendingFilters] = useState([]);
   useEffect(async () => {
