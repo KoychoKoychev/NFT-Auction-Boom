@@ -4,7 +4,7 @@ import { Grid,Container,Select,MenuItem } from "@mui/material";
 import CollectorColumn from "./CollectorColumn";
 
 
-export default function TopCollectors({collectors=[], filters=[]}) {
+export default function TopCollectors({collectors=[], filters=[] , onChange, sortValue}) {
 
     const chunk = require('lodash.chunk');
 
@@ -20,7 +20,8 @@ export default function TopCollectors({collectors=[], filters=[]}) {
                     <Select
                         className={classNames(styles.selectMenu)}
                         id="select-trending-period"
-                        defaultValue="asc"
+                        value = {sortValue}
+                        onChange = {onChange}
                     >
                         {filters.map((el,index)=>{
                             return <MenuItem key={index} value={el.value}>{el.label}</MenuItem>

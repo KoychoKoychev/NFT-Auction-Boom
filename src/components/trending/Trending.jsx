@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Container, Grid, MenuItem, Select } from "@mui/material";
 import Card from "../card/Card"
 
-export default function Trending({ cards = [], filters }) {
+export default function Trending({ cards = [], filters, onChange, filterValue }) {
     return (
         <div className={classNames(styles.wrapper)}>
             <Container maxWidth="xl">
@@ -12,11 +12,14 @@ export default function Trending({ cards = [], filters }) {
                     <Select
                         className={classNames(styles.selectMenu)}
                         id="select-trending-period"
-                        defaultValue={1}
+                        defaultValue={3}
+                        value={filterValue}
+                        onChange = {onChange}
                     >
                         {filters.map((el,index)=>{
                             return <MenuItem key={index} value={el.value}>{el.label}</MenuItem>
                         })}
+                        <MenuItem value={3}>{'All Items'}</MenuItem>
                     </Select>
                 </div>
                 <Grid container spacing={2}>
