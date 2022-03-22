@@ -23,4 +23,8 @@
 
 .product-info-creator .user-container{
     margin: 19px 0px 0px 27px;
+
+    * span{
+        max-width: 225px !important;
+    }
 }
