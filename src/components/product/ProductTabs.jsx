@@ -30,7 +30,7 @@ export default function ProductTabs({ text, bids }) {
                             return (
                                 <TableRow key={i} className={classNames(styles[`table-row-${i}`])}>
                                     <TableCell className={classNames(styles[`table-cell-1`])}>
-                                        <User name={bid.user.name} avatar={bid.user.avatar} size="34" verified={bid.user.verified} />
+                                        <User name={bid.user.name} avatar={bid.user.avatar} size="34" verified={bid.user.verified} id={bid.user.id} />
                                     </TableCell>
                                     <TableCell className={classNames(styles[`table-cell-2`])}>{bid.amount} ETH</TableCell>
                                     <TableCell className={classNames(styles[`table-cell-3`])}>{formatDistance(new Date(parseISO(bid.date)), Date.now(), { addSuffix: true })}</TableCell>

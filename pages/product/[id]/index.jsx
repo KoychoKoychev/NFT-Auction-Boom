@@ -28,7 +28,7 @@ export default function Product() {
             <ProductContainer
                 name={product.name}
                 source={product.source}
-                owner={{ username: product.owner.username, verified: product.owner.confirmed, avatar: product.owner.avatar}}
+                owner={{ username: product.owner.username, verified: product.owner.confirmed, avatar: product.owner.avatar, id:product.owner.id}}
                 price={product.price}
                 currency={product.currency}
                 likes={product.likes}

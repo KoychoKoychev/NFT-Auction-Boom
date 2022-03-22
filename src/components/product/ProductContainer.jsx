@@ -40,7 +40,7 @@ export default function ProductContainer({ name="", owner, price, currency, like
                 <Grid item xs={5}>
                     <ProductInfo 
                     title={name} 
-                    creator={{name:owner.username, avatar:owner.avatar.url, verified:owner.verified}}
+                    creator={{name:owner.username, avatar:owner.avatar.url, verified:owner.verified, id:owner.id}}
                     price={price}
                     currency={currency}
                     likes={likes}
