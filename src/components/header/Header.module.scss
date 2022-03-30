@@ -1,0 +1,80 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.container {
+    display: flex !important;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: colors.$background_default;
+    height: 51px;
+    width: 580px;
+}
+
+.searchIcon{
+    height: 16px;
+    margin-left: 22px;
+}
+
+.searchField{
+    background-color: colors.$background_default;
+    border: none;
+    color: colors.$text_secondary;
+    margin-left: 10px;
+    margin-right: 30px;
+    font-size: 1rem;
+    font-size: normal;
+    font-weight: 400;
+    width: 100%;
+    line-height: 26px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .searchBar{
+        display: none;
+    }
+}
+
+.searchField::placeholder{
+    color: colors.$text_secondary;
+}
+
+.searchField:focus{
+    outline: none;
+    border: none;
+}
+
+.nav{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: colors.$background_paper;
+    height: 98px;
+    font-family:"Montserrat",sans-serif;
+}
+
+.navMenu{
+    padding: 0px;
+    list-style-type: none;
+}
+
+.listItem{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+
+.link{
+    text-decoration: none;
+    color: colors.$text_secondary;
+    font-weight: 600;
+    font-size: 14px;
+}

@@ -1,0 +1,37 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.profile-user{
+    display:  flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    margin: 0px auto;
+    padding-top: 176px;
+}
+
+.profile-user .name{
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    color: colors.$text_primary;
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+
+.profile-user .body{
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: colors.$text_secondary;
+    word-wrap: unset;
+    width: 500px;
+    margin-right: 50px;
+}

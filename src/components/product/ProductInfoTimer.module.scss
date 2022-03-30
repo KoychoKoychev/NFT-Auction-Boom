@@ -1,0 +1,38 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.product-info-timer{
+    height: 118px;
+    border-radius: 15px;
+}
+
+.product-info-timer.active{
+    background-color: colors.$secondary_main;
+}
+
+.product-info-timer .title{
+    text-align: center;
+    width: 100%;
+    background-color: rgba(colors.$background_default, 10%);
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+
+.product-info-timer .timer{
+    display: inline-block;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30.6761px;
+    line-height: 37px;
+    color: colors.$background_paper;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+}

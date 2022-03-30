@@ -1,0 +1,40 @@
+@use "../../styles/colors";
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.inline{
+    display: inline;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+
+.name{
+    margin-left: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    color: colors.$text_primary;
+}
+
+.info{
+    font-family: "Montserrat",sans-serif;
+    white-space: nowrap;
+    margin-left: 10px;
+    display: block;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: colors.$info_main;
+}

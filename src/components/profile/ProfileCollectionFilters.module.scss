@@ -1,0 +1,52 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+
+.profile-collection-filters{
+    position: relative;
+
+    *{
+        min-height: unset;
+    }
+}
+
+.profile-collection-filters .profile-select-sort, .profile-collection-filters .select_price{
+    width: 220px;
+    height: 50px;
+    color: colors.$text_secondary;
+    background-color: colors.$background_paper;
+    border-radius: 30px;
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 20px;
+
+    *{
+        min-height: unset !important;
+    }
+}
+
+
+.profile-collection-filters label{
+    margin-left: 0px;
+    line-height: 1.1em;
+}
+
+.profile-collection-filters svg{
+    color: colors.$text_secondary;
+}
+
+.profile-collection-filters .text_input{
+    width: 330px;
+    height: 50px;
+    color: colors.$text_secondary;
+    background-color: colors.$background_paper;
+    border-radius: 30px;
+    padding: 10px 20px;
+
+    *::before,*::after{
+        border: none !important;
+    }
+}

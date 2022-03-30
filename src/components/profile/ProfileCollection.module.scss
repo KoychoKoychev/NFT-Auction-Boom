@@ -1,0 +1,36 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.profile-collection{
+    width: 100vw;
+    margin-bottom: 143px;
+}
+
+.profile-collection .title{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+}
+
+.profile-collection .filters{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.profile-collection .filters .sort{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.profile-collection .wrapper .cards:nth-child(4n){
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-collection .wrapper .cards:nth-child(4n+2), .profile-collection .wrapper .cards:nth-child(4n+3){
+    display: flex;
+    justify-content: center;
+}

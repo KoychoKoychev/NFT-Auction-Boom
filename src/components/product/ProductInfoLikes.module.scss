@@ -1,0 +1,22 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.product-info-likes .likes{
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.0725rem;
+    color: colors.$secondary_main;
+    margin: 0;
+    border:3px solid colors.$secondary_main;
+    border-radius: 7px;
+    padding: 9px 0px 9px 5px;
+}
+
+.product-info-likes .likes span{
+    padding-right: 7px;
+}
+
+.product-info-likes .likes .hearthIcon{
+    color: colors.$secondary_main;
+}

@@ -1,0 +1,20 @@
+@use "../../styles/colors";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+.product-info-status .status .circleIcon{
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    color: colors.$background_paper;
+}
+
+.product-info-status .status{
+    border-radius: 7px;
+    background-color: colors.$secondary_main;
+    color: colors.$background_paper;
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+}
